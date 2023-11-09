@@ -37,6 +37,9 @@ export function SubscribeBox(){
             <div aria-hidden="true" style={{position:"absolute", left:-5000}}>
                 <input type="text" name="b_a480b97af16f9410c010f711f_5b4d5992f1" tabindex="-1"/>
             </div>
+            
+            <div hidden=""><input type="hidden" name="tags" value="2964068"/></div>
+
             <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Suscribirme" style={{cursor:"pointer"}}/>
 
         </form>

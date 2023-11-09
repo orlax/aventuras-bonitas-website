@@ -14,9 +14,9 @@ const banner = require("../img/banner.jpg")
 export function HomeScreen (){
     return(
     <div>
-        <Header/>
+        <Header className="absolute"/>
         <div className="video-container">
-            <video src={video} autoPlay muted loop></video>
+            <video src={video} autoPlay muted loop playsinline></video>
             <img className="hide-on-mobile" src={hender_logo} alt="Adventure in Henders castle Typography logo" />
         </div>
 

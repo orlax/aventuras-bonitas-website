@@ -6,7 +6,7 @@ export function SubscribeBox(){
 
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
-    const [hide, setHide] = useState(false);
+    const [hide, setHide] = useState(window.innerWidth<750);
 
     const submitForm = (e) => {
         if(email.length<2 || name.length<2){
@@ -18,13 +18,14 @@ export function SubscribeBox(){
         setHide(!hide);
     }
 
+
     if(!hide){
         return(
-            <div className="subscribe-box">
+        <div className="subscribe-box">
         <button className="top-link" onClick={Toggle}>Ocultar</button>
        
        <b>Preventa <br/> Disponible <br/> Pronto</b>
-       <p className="text-l">¿Te gusta el Juego? suscribete para recibir noticias nuestras.</p>
+       <p className="text-l" style={{marginBottom:20, marginTop:20}}>¿Te gusta el Juego? suscribete para recibir noticias nuestras.</p>
        
         <form onSubmit={submitForm} action="https://aventurasbonitas.us21.list-manage.com/subscribe/post?u=a480b97af16f9410c010f711f&amp;id=5b4d5992f1&amp;f_id=002be5e6f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate="">
             <div class="mc-field-group"><label for="mce-FNAME">Nombre </label>
@@ -36,7 +37,7 @@ export function SubscribeBox(){
             <div aria-hidden="true" style={{position:"absolute", left:-5000}}>
                 <input type="text" name="b_a480b97af16f9410c010f711f_5b4d5992f1" tabindex="-1"/>
             </div>
-            <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe" style={{cursor:"pointer"}}/>
+            <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Suscribirme" style={{cursor:"pointer"}}/>
 
         </form>
     </div>)

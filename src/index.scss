@@ -39,7 +39,6 @@ footer{
 }
 
 header{
-  position: absolute;
   top: 0px;
   left: 0px;
   display: flex;
@@ -127,6 +126,12 @@ header{
   width: 100%;
 }
 
+.column{
+  display: flex;
+  flex-direction: column;
+}
+
+
 .half{
   width: 45%;
   padding: 2.5%;
@@ -192,6 +197,10 @@ header{
   }
 }
 
+.absolute{
+  position: absolute;
+}
+
 .top-link{
   position: absolute;
     top: 9px;
@@ -251,8 +260,29 @@ header{
     width: 95%;
   }
 
+  .subscribe-box{
+    max-width: 100%;
+    width: 92%;
+    right: 0px;
+    bottom: 0px;
+    border-radius: 0px;
+    padding-bottom: 70px;
+    text-align: center;
+
+  }
+
   p{    
     font-size: 1.4em;
     width: 80%;
     margin: auto;}
+  
+    h1, h2, h3{
+      width: 80%;
+      margin:auto;
+    }
+
+    iframe{
+      height: 280;
+      margin:auto
+    }
 }

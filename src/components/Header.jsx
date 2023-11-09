@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 const logo = require('../img/ab_logo.png');
 const menu_icon = require('../img/menu-icon.png');
 
-export function Header(){
+export function Header(props){
     
     const [menu, setMenu] = useState(false);
 
@@ -13,7 +13,7 @@ export function Header(){
     }
 
     return(
-    <header>
+    <header className={props.className}>
         <div>
             <img src={logo} alt="" />
             <nav className='hide-on-mobile'>

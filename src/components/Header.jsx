@@ -23,6 +23,9 @@ export function Header(props){
                 <NavLink to="/blog" className={({ isActive }) => isActive ? "active" : ""}>
                     Blog
                 </NavLink>
+                <NavLink to="/jobs" className={({ isActive }) => isActive ? "active" : ""}>
+                    Trabaja con nosotros
+                </NavLink>
                 <a href="https://www.youtube.com/channel/UCj6GYJhAIXQGVeSKn5UpoZQ" target='blank'>Youtube</a>
                 <a href="https://www.tiktok.com/@aventurasbonitas0" target='blank'>TikTok</a>
                 <a href="https://www.instagram.com/aventurasbonitas/" target='blank'>Instagram</a>

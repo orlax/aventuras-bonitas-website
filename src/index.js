@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import { HomeScreen } from './pages/Home';
 import { BlogScreen } from './pages/Blog';
+import { WorkScreen } from './pages/Work';
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path:"/blog", 
     element: <BlogScreen/>
+  },
+  {
+    path:"/jobs",
+    element: <WorkScreen/>
   }
 ])
 

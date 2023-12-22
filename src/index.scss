@@ -233,6 +233,16 @@ header{
   display: none;
 }
 
+.button{
+  background-color: #00cbff;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 16px 22px;
+  margin-top: 42px;
+  border-radius: 4px;
+}
+
 @media only screen and (max-width: 800px) {
   .hide-on-mobile{
     display: none;

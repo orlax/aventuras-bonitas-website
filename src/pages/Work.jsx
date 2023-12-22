@@ -10,7 +10,7 @@ export function WorkScreen (){
         <Header/>
         <div className="container" style={{paddingTop:20}}>
         <h1>Trabaja con Nosotros</h1>
-        <p>Aquí se encuentran las posiciones que estamos buscando llenar en el equipo de Aventuras Bonitas</p>
+        <p>Aquí se encuentran las posiciones que estamos buscando llenar en el equipo de Aventuras Bonitas.</p>
 
         <div style={{marginTop:30}}>
 

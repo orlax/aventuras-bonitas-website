@@ -31,6 +31,9 @@ export function WorkScreen (){
                 un trabajo excepcional.
             </p>
 
+            <br/>
+
+            <p>
             <b>Qué esperamos:</b>
 
             <ul>
@@ -59,12 +62,13 @@ export function WorkScreen (){
                 <li>Tenemos un programa de Mejora personal en el que averiguamos tus metas y hacemos lo que podemos por ayudarte a conseguirlas.</li>
                 <li>Estamos trabajando en un juego genial, y puedes ser parte de ello.</li>
             </ul>
+            </p>
 
             <p>Estamos creando un juego increible, y necesitamos tu ayuda para continuar, si te interesa esta posicion llena el formulario</p>
 
-            <div style={{marginTop:45}}>
+            <p style={{marginTop:45}}>
                 <a href="https://forms.gle/1aqA9A6KUuQiMWg17" target="new" className="button">Postularme a este Trabajo</a>
-            </div>
+            </p>
 
         </div>
 

@@ -52,13 +52,13 @@ export function HomeScreen (){
                     <h2 style={{
                         padding: 20,
                         fontSize:"1.8em"
-                    }}>Somos un estudio de Video Juegos haciendo juegos de aventuras</h2>
+                    }}>Somos un estudio de Videojuegos haciendo juegos de aventuras</h2>
                 </div>
                 <div className="half center">
                     <p>
-                        Aventuras Bonitas es un estudio de Video juegos Independiente de Barranquilla, 
-                        Colombia. Fundado en 2022 para crear juegos de Aventuras. <br/>
-                        <b>Actualmente trabajamos en nuestro primer juego Aventura en el Castillo de Hender</b>
+                        Aventuras Bonitas es un estudio de Videojuegos Independiente de Barranquilla, 
+                        Colombia. Fundado en 2022 para crear juegos de aventuras. <br/>
+                        <b>Actualmente trabajamos en nuestro primer juego Aventura en el Castillo de Hender.</b>
                     </p>
                 </div>
             </div>

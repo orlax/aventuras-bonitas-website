@@ -16,10 +16,10 @@ export function WorkScreen (){
 
         <div style={{maxWidth: "36em"}}>
 
-            <h2>Artista Generalista 2D y 3D</h2>
+            <h2>Artista Generalista 3D</h2>
             
             <p>
-                Estamos buscando un artista generalista en 2D y 3D, alguien que pueda hacerse cargo de
+                Estamos buscando un artista generalista 3D, alguien que pueda hacerse cargo de
                 todo el pipeline de arte de nuestros juegos. Desde el diseño de personajes y escenarios,     
                 animación, rigging, texturizado y su integración en el motor de juegos de Unity.
             </p>
@@ -38,7 +38,7 @@ export function WorkScreen (){
 
             <ul>
                 <li>Colaborar con el Diseñador del juego para entender e interpretar conceptos visuales.</li>
-                <li>Crear assets 2D y 3D incluyendo personajes, ambientes y accesorios.</li>
+                <li>Crear assets 3D incluyendo personajes, ambientes y accesorios.</li>
                 <li>Diseñar e ilustrar arte conceptual.</li>
                 <li>Crear texturas y animaciones.</li>
                 <li>Trabajar de cerca con los desarrolladores de gameplay para integrar los assets en el motor de juegos.</li>
@@ -49,10 +49,20 @@ export function WorkScreen (){
 
             <ul>
                 <li>Saber inglés en nivel B1/B2 o superior.</li>
+                <li>Experiencia en diseño e ilustración 2D.</li>
                 <li>Tener experiencia en la industria de videojuegos.</li>
                 <li>Tener experiencia trabajando con sistemas de control de versiones.</li>
                 <li>Tener experiencia trabajando con Unity.</li>
             </ul>
+
+            <p>
+            <b>Ubicación</b>
+
+            <ul>
+                <li>Remoto.</li>
+                <li><b>⚠️NOTA⚠️:</b> A pesar de que la oferta es para trabajo remoto, por esta ocasión estaremos limitando la búsqueda a latinoamérica.</li>
+            </ul>
+            </p>
 
             <b>¿Por qué trabajar con nosotros?</b>
 

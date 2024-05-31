@@ -108,14 +108,13 @@ export const Header = ({ lang = "es", dictionary, socialNetworks }: HeaderProps)
                     <div className='flex-1 md:flex xs:hidden md:justify-center lg:justify-end'>
                         <div className='md:w-72 md:h-72 lg:w-96 rounded-lg relative'>
                             {promotionalImage &&
-                            <Image
+                            <img
                                 className='h-auto w-full'
                                 src={promotionalImage}
                                 alt="Header Promo"
                                 style={{
                                     objectFit: 'contain',
                                 }}
-                                fill
                             />}
                         </div>
                     </div>

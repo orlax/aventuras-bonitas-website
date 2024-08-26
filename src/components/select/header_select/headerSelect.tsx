@@ -52,14 +52,14 @@ export const HeaderSelect = ({ lang, className }: HeaderSelectProps) => {
 
   return (
     <>
-      <button
+      <div
         id="states-button"
         data-dropdown-toggle="dropdown-states"
         className={cn(
           "flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-500 bg-transparent border-0 rounded-s-lg focus:ring-none focus:outline-none focus:ring-0  dark:text-white dark:border-gray-600 relative",
           className
         )}
-        type="button"
+        role="button"
         onClick={() => setDisplaySelect(!displaySelect)}
       >
         <Image
@@ -129,7 +129,7 @@ export const HeaderSelect = ({ lang, className }: HeaderSelectProps) => {
             </motion.div>
           )}
         </AnimatePresence>
-      </button>
+      </div>
     </>
   );
 };

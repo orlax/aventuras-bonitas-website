@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { useEffect, useRef, useState } from "react";
 import { HeaderMenuButton } from "../button";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { NAVIGATION } from "@/lib";
 import Link from "next/link";
 import { fireAppStorage, fireStorageRef } from "@/services/firebase";
@@ -12,6 +12,7 @@ import { getDownloadURL } from "firebase/storage";
 import { AnimatePresence, motion } from "framer-motion";
 import { HeaderMenuButtonLink } from "@/components/button/header/headerMenuButtonLink";
 import { HeaderSelect } from "@/components/select/header_select/headerSelect";
+import { cn } from "@/lib/utils";
 
 type HeaderProps = {
   lang: any;
@@ -29,6 +30,8 @@ export const Header = ({
   socialNetworks,
 }: HeaderProps) => {
   const router = useRouter();
+  const path = usePathname();
+
   const menuItems = [
     {
       text: "game",
@@ -68,6 +71,7 @@ export const Header = ({
     },
   ];
   const [menuVisible, setMenuVisible] = useState(false);
+  const [blackBg, setBlackBg] = useState(false);
   const [promotionalImage, setPromotionalImage] = useState("");
   const componentLoaded = useRef(false);
 
@@ -76,7 +80,31 @@ export const Header = ({
       componentLoaded.current = true;
       getPromotionalImage();
     }
+
+    window.addEventListener("resize", (e: any) => {
+      if (e.currentTarget.innerWidth >= 320) {
+        if (document.body.classList.contains("overflow-hidden")) {
+          document.body.classList.remove("overflow-hidden");
+        }
+      } else {
+        if (!document.body.classList.contains("overflow-hidden")) {
+          document.body.classList.add("overflow-hidden");
+        }
+      }
+    });
+
+    return window.addEventListener("resize", (e) => {});
   }, []);
+
+  useEffect(() => {
+    const splitPath = path.split("/");
+
+    if (splitPath[2] !== undefined) {
+      setBlackBg(true);
+    } else {
+      setBlackBg(false);
+    }
+  }, [path]);
 
   const getPromotionalImage = async () => {
     const firePromoImage = fireStorageRef(
@@ -95,7 +123,7 @@ export const Header = ({
 
   return (
     <motion.header
-      className="flex flex-col absolute w-full"
+      className={cn("flex flex-col absolute w-full", blackBg && "bg-ab-black")}
       initial={{ top: -300 }}
       animate={{ top: 0, transition: { delay: 0.3 } }}
     >
@@ -153,7 +181,7 @@ export const Header = ({
       <AnimatePresence>
         {menuVisible && (
           <motion.div
-            className="header-menu absolute pt-20 h-screen w-full z-10"
+            className="header-menu absolute pt-20 h-screen w-full z-10 xs:flex md:hidden"
             initial={{ y: 300 }}
             animate={{ y: 0 }}
             exit={{ y: 300, opacity: 0 }}

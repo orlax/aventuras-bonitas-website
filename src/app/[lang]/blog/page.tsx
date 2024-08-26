@@ -14,7 +14,7 @@ export default async function Blog({
     <main className="flex flex-col bg-ab-black">
       <ContentWrapper
         className="min-h-screen w-full bg-gradient-to-l from-ab-light-blue from-70% to-white
-                flex items-start gap-4 py-10 lg:flex-col md:flex-row sm:flex-col xs:flex-col"
+                flex items-start gap-4 py-10 lg:flex-col md:flex-row sm:flex-col xs:flex-col !pt-[100px]"
       >
         <section className="flex flex-col items-start gap-4 text-ab-black w-full">
           <h3 className="font-semibold text-2xl">{dictionary?.blog.title}</h3>

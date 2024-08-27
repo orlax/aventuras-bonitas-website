@@ -17,7 +17,7 @@ export const ContactModal = () => {
 
   useEffect(() => {
     setIsMounted(isModalOpen);
-
+    window.scrollTo({ top: 0, left: 0 });
     if (isModalOpen) {
       if (document.body.classList.contains("overflow-hidden")) {
         document.body.classList.remove("overflow-hidden");
@@ -33,7 +33,12 @@ export const ContactModal = () => {
   }, [isModalOpen]);
 
   if (!isMounted && !isModalOpen) {
-    setTimeout(() => setDismount(true), 500);
+    setTimeout(() => {
+      setDismount(true);
+      if (document.body.classList.contains("overflow-hidden")) {
+        document.body.classList.remove("overflow-hidden");
+      }
+    }, 300);
   }
 
   if (dismount) return <></>;

@@ -87,6 +87,7 @@ export default async function Home({ params: { lang } }: HomeProps) {
             buttonClassname="bg-ab-orange"
             buttonText={dictionary?.featured_game.button}
             redirectUrl={"/subscribe"}
+            contactDict={dictionary?.subscribe}
           />
 
           <PlatformPanel

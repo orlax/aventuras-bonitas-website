@@ -17,27 +17,14 @@ export const ContactModal = () => {
 
   useEffect(() => {
     setIsMounted(isModalOpen);
-    window.scrollTo({ top: 0, left: 0 });
     if (isModalOpen) {
-      if (document.body.classList.contains("overflow-hidden")) {
-        document.body.classList.remove("overflow-hidden");
-      } else {
-        document.body.classList.add("overflow-hidden");
-      }
       setDismount(false);
-    } else {
-      if (document.body.classList.contains("overflow-hidden")) {
-        document.body.classList.remove("overflow-hidden");
-      }
     }
   }, [isModalOpen]);
 
   if (!isMounted && !isModalOpen) {
     setTimeout(() => {
       setDismount(true);
-      if (document.body.classList.contains("overflow-hidden")) {
-        document.body.classList.remove("overflow-hidden");
-      }
     }, 300);
   }
 
@@ -49,7 +36,7 @@ export const ContactModal = () => {
 
   return (
     <motion.div
-      className="absolute w-full h-full bg-ab-black flex items-center justify-center z-30 bg-opacity-70"
+      className="backdrop-blur-sm absolute w-full h-full bg-ab-black flex items-center justify-center z-30 bg-opacity-70"
       animate={{ top: isMounted ? 0 : -300, opacity: isMounted ? 1 : "0" }}
       initial={{ top: "-100%", opacity: 0 }}
     >

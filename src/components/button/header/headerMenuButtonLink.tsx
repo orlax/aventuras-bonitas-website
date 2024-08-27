@@ -11,7 +11,10 @@ export const HeaderMenuButtonLink = ({
 }: HeaderMenuButtonLinkProps) => {
   return (
     <div className="flex-1 text-center">
-      <button className="group" onClick={() => onClick(true)}>
+      <button
+        className="group md:text-[14px] lg:text-[16px]"
+        onClick={() => onClick(true)}
+      >
         {element}
         <div className="h-[1px] w-0 group-hover:w-full bg-white transition-all" />
       </button>

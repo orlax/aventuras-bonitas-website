@@ -151,7 +151,7 @@ export const Header = ({
             <Image
               src={`/logo/with_name_logo.${lang}.png`}
               alt="Nice Adventures Logo"
-              className="object-contain"
+              className="object-contain w-full h-full"
               priority
               width={112}
               height={56}
@@ -172,7 +172,7 @@ export const Header = ({
           )}
         </button>
 
-        <div className="flex xs:hidden md:flex sm:max-w-[80%] md:max-w-[65%] lg:max-w-[55%] xl:max-w-[53%] w-full">
+        <div className="flex xs:hidden md:flex sm:max-w-[85%] md:max-w-[80%] lg:max-w-[70%] xl:max-w-[60%] w-full">
           <ul className="flex flex-row gap-2 w-full items-center">
             {menuItems.map((item, index) => (
               <li

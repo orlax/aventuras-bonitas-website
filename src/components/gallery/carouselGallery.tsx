@@ -5,6 +5,7 @@ import { AnimatePresence, motion, PanInfo } from "framer-motion";
 import { SpringCarouselImage } from "@/components/images/spring_carousel/springCarousel";
 import { useOutsideClick } from "@/hooks/useClickOutside";
 import Image from "next/image";
+import { useModal } from "@/store/useModal";
 
 interface CarouselGalleryProps {
   images: { url: string; name: string }[];
@@ -15,14 +16,12 @@ export const CarousellGalery: React.FC<CarouselGalleryProps> = ({ images }) => {
   const [[page, direction], setPage] = useState([index, 0]);
   const [dragging, setDragging] = useState(false);
   const [dragOffset, setDragOffset] = useState(0);
-  const [currentFullSizeImage, setCurrentFullSizeImage] =
-    useState<SpringCarouselImage | null>(null);
+
+  const { onOpen } = useModal();
 
   const getImageIndex = (index: number) => {
     return ((index % images.length) + images.length) % images.length;
   };
-
-  const ref = useOutsideClick(() => setCurrentFullSizeImage(null));
 
   const imageIndex = getImageIndex(page);
   const leftIndex = getImageIndex(page - 1);
@@ -123,11 +122,8 @@ export const CarousellGalery: React.FC<CarouselGalleryProps> = ({ images }) => {
 
   const showImage = (index: number) => {
     const selectedSlide = images[index];
-    setCurrentFullSizeImage({
-      url: selectedSlide.url,
-      name: selectedSlide.name,
-      id: 0,
-    });
+
+    onOpen("image", { image: { ...selectedSlide, id: 0 } });
   };
 
   return (
@@ -205,30 +201,6 @@ export const CarousellGalery: React.FC<CarouselGalleryProps> = ({ images }) => {
           className="w-[24%] object-cover h-[auto] hover:scale-[1.02] cursor-pointer"
           onClick={() => paginate(1)}
         />
-
-        {currentFullSizeImage && (
-          <motion.div
-            className="backdrop-blur-sm absolute bg-ab-black-70 flex justify-center p-12 z-20 w-full h-full
-                items-center
-                top-0 left-0"
-            initial={{ scale: 0.2, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.2, opacity: 0 }}
-          >
-            <div
-              ref={ref}
-              className="flex items-center justify-center w-[800px] h-[400px] mx-auto"
-            >
-              <Image
-                src={currentFullSizeImage.url}
-                alt={currentFullSizeImage.name}
-                className="h-full w-full"
-                width={2000}
-                height={1600}
-              />
-            </div>
-          </motion.div>
-        )}
       </AnimatePresence>
     </div>
   );

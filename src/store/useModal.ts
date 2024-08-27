@@ -1,9 +1,11 @@
+import { SpringCarouselImage } from "@/components/images/spring_carousel/springCarousel";
 import { create } from "zustand";
 
-export type ModalType = "contact-form";
+export type ModalType = "contact-form" | "image";
 
 interface ModalData {
   contactDict?: any;
+  image?: SpringCarouselImage;
   onCloseAction?: () => void;
 }
 

@@ -1,104 +1,104 @@
 {
-    "metadata": {
-        "title": "Nice Adventures",
-        "description": "Nice Adventures is an indie game development studio founded in 2022 and based in Barranquilla, Colombia."
-    },
-    "subscribe": {
-        "title": "Do you like the game? Subscribe to receive news from us.",
-        "form_name": "Name",
-        "form_placeholder_name": "John Doe",
-        "form_invalid_name": "The Name is not valid.",
-        "form_email": "Email",
-        "form_placeholder_email": "an_email@mail.com",
-        "form_invalid_email": "The Email is not valid.",
-        "form_success": "Subscribed! From now on, you will receive updates to the provided email.",
-        "form_error": "We couldn't subscribe you to the mailing list, please try again.",
-        "form_submit": "Subscribe"
-    },
-    "blog": {
-        "title": "Development Blog",
-        "description": "Here you will find blogs about the development of our games."
-    },
-    "careers": {
-        "title": "Work with Us",
-        "description": "Here are the positions we are looking to fill in the Nice Adventures team.",
-        "job_description": "What we expect",
-        "job_nice_to_have": "Nice to have",
-        "job_location": "Location",
-        "why_us_title": "Why work with us?",
-        "reasons": [
-            "We are looking for members to join our team for the next years; this is a commitment that will provide long-term job stability.",
-            "We offer a friendly work environment, with no crunch, organized work methodologies, no sudden changes in direction, and no arbitrary deadlines.",
-            "We have a Personal Improvement program where we identify your goals and do what we can to help you achieve them.",
-            "We are working on a cool game, and you can be a part of it."
-        ],
-        "footer": "We are creating an amazing game, and we need your help to continue. If you are interested in this position, fill out the form.",
-        "apply_job": "Apply for this job"
-    },
+  "metadata": {
+    "title": "Nice Adventures",
+    "description": "Nice Adventures is an indie game development studio founded in 2022 and based in Barranquilla, Colombia."
+  },
+  "subscribe": {
+    "title": "Do you like the game? Subscribe to receive news from us.",
+    "form_name": "Name",
+    "form_placeholder_name": "John Doe",
+    "form_invalid_name": "The Name is not valid.",
+    "form_email": "Email",
+    "form_placeholder_email": "an_email@mail.com",
+    "form_invalid_email": "The Email is not valid.",
+    "form_success": "Subscribed! From now on, you will receive updates to the provided email.",
+    "form_error": "We couldn't subscribe you to the mailing list, please try again.",
+    "form_submit": "Subscribe"
+  },
+  "blog": {
+    "title": "Development Blog",
+    "description": "Here you will find blogs about the development of our games."
+  },
+  "careers": {
+    "title": "Work with Us",
+    "description": "Here are the positions we are looking to fill in the Nice Adventures team.",
+    "job_description": "What we expect",
+    "job_nice_to_have": "Nice to have",
+    "job_location": "Location",
+    "why_us_title": "Why work with us?",
+    "reasons": [
+      "We are looking for members to join our team for the next years; this is a commitment that will provide long-term job stability.",
+      "We offer a friendly work environment, with no crunch, organized work methodologies, no sudden changes in direction, and no arbitrary deadlines.",
+      "We have a Personal Improvement program where we identify your goals and do what we can to help you achieve them.",
+      "We are working on a cool game, and you can be a part of it."
+    ],
+    "footer": "We are creating an amazing game, and we need your help to continue. If you are interested in this position, fill out the form.",
+    "apply_job": "Apply for this job"
+  },
 
-    "header": {
-        "menu": "Menu",
-        "close": "Close",
-        "game": "Game",
-        "services": "Services",
-        "about": "About us",
-        "contact": "Subscribe"
-    },
+  "header": {
+    "menu": "Menu",
+    "close": "Close",
+    "game": "Game",
+    "services": "Services",
+    "about": "About us",
+    "contact": "Subscribe",
+    "blog": "Blog"
+  },
 
-    "promo_panel": {
-        "button_label": "See it in action"
-    },
+  "promo_panel": {
+    "button_label": "See it in action"
+  },
 
-    "featured_game": {
-        "page_anchor": "Comming soon",
-        "button": "Subscribe to waiting list"
-    },
+  "featured_game": {
+    "page_anchor": "Comming soon",
+    "button": "Subscribe to waiting list"
+  },
 
-    "platform": {
-        "release_date": "Release",
-        "title": "Available on these platforms"
-    },
+  "platform": {
+    "release_date": "Release",
+    "title": "Available on these platforms"
+  },
 
-    "about": {
-        "page_anchor": "About us",
-        "title": "“We communicate clearly and craft software solutions that deliver results.”",
-        "description": "Nice Adventures is an independent video game studio from Barranquilla, Colombia. Founded in 2022 to create adventure games.",
-        "button": "Explore Jobs"
-    },
+  "about": {
+    "page_anchor": "About us",
+    "title": "“We communicate clearly and craft software solutions that deliver results.”",
+    "description": "Nice Adventures is an independent video game studio from Barranquilla, Colombia. Founded in 2022 to create adventure games.",
+    "button": "Explore Jobs"
+  },
 
-    "services": {
-        "page_anchor": "Our Services",
-        "title": "Software Development",
-        "description": "With a decade of expertise, our software developers have crafted web and mobile solutions enjoyed by hundreds of thousands. Specializing in payment platforms, crypto exchanges, diverse mobile apps and cutting-edge AI tools like ChatGPT, we're eager to discuss your needs.",
-        "solutions": [
-            {
-                "id": "mobile",
-                "title": "Mobile Application Development",
-                "description": "Mobile application development."
-            },
-            {
-                "id": "games",
-                "title": "Videogame Development",
-                "description": "Videogame development."
-            },
-            {
-                "id": "ai",
-                "title": "ChatGPT Integrations",
-                "description": "ChatGPT integrations."
-            },
-            {
-                "id": "web",
-                "title": "Web Application Development",
-                "description": "Web application development."
-            }
-        ]
-    },
+  "services": {
+    "page_anchor": "Our Services",
+    "title": "Software Development",
+    "description": "With a decade of expertise, our software developers have crafted web and mobile solutions enjoyed by hundreds of thousands. Specializing in payment platforms, crypto exchanges, diverse mobile apps and cutting-edge AI tools like ChatGPT, we're eager to discuss your needs.",
+    "solutions": [
+      {
+        "id": "mobile",
+        "title": "Mobile Application Development",
+        "description": "Mobile application development."
+      },
+      {
+        "id": "games",
+        "title": "Videogame Development",
+        "description": "Videogame development."
+      },
+      {
+        "id": "ai",
+        "title": "ChatGPT Integrations",
+        "description": "ChatGPT integrations."
+      },
+      {
+        "id": "web",
+        "title": "Web Application Development",
+        "description": "Web application development."
+      }
+    ]
+  },
 
-    "footer": {
-        "blog": "Blog",
-        "jobs": "Work with us",
-        "subscribe": "Subscribe",
-        "company": "© Nice Adventures"
-    }
-
+  "footer": {
+    "blog": "Blog",
+    "jobs": "Work with us",
+    "subscribe": "Subscribe",
+    "company": "© Nice Adventures"
+  }
 }

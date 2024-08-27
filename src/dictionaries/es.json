@@ -1,103 +1,104 @@
 {
-    "metadata": {
-        "title": "Aventuras Bonitas",
-        "description": "Aventuras Bonitas es un estudio de videojuegos independiente fundado en 2022 y ubicado en la ciudad de Barranquilla, Colombia."
-    },
-    "subscribe": {
-        "title": "¿Te gusta el Juego? Suscribete para recibir noticias nuestras.",
-        "form_name": "Nombre",
-        "form_placeholder_name": "John Doe",
-        "form_invalid_name": "El Nombre no válido.",
-        "form_email": "Correo",
-        "form_placeholder_email": "un_correo@mail.com",
-        "form_invalid_email": "El Correo no válido.",
-        "form_success": "¡Suscrito! A partir de ahora recibirás novedades al correo proporcionado.",
-        "form_error": "No hemos podido suscribirte a la lista de correos, inténtalo una vez más.",
-        "form_submit": "Suscribirme"
-    },
-    "blog": {
-        "title": "Blog de Desarrollo",
-        "description": "Aquí se encuentran los blogs sobre el desarrollo de nuestros juegos."
-    },
-    "careers": {
-        "title": "Trabaja con Nosotros",
-        "description": "Aquí se encuentran las posiciones que estamos buscando llenar en el equipo de Aventuras Bonitas.",
-        "job_description": "Qué esperamos",
-        "job_nice_to_have": "Puntos extras",
-        "job_location": "Ubicación",
-        "why_us_title": "¿Por qué trabajar con nosotros?",
-        "reasons": [
-            "Estamos buscando miembros que se unan a nuestro equipo por los próximos años, este es un compromiso que brindará estabilidad laboral a largo plazo.",
-            "Ofrecemos un ambiente de trabajo cordial, sin crunch, con metodologías de trabajo organizadas, sin cambios de dirección repentinos ni deadlines arbitrarios.",
-            "Tenemos un programa de Mejora personal en el que averiguamos tus metas y hacemos lo que podemos por ayudarte a conseguirlas.",
-            "Estamos trabajando en un juego genial, y puedes ser parte de ello."
-        ],
-        "footer": "Estamos creando un juego increible, y necesitamos tu ayuda para continuar, si te interesa esta posicion llena el formulario.",
-        "apply_job": "Postularme a este trabajo"
-    },
+  "metadata": {
+    "title": "Aventuras Bonitas",
+    "description": "Aventuras Bonitas es un estudio de videojuegos independiente fundado en 2022 y ubicado en la ciudad de Barranquilla, Colombia."
+  },
+  "subscribe": {
+    "title": "¿Te gusta el Juego? Suscribete para recibir noticias nuestras.",
+    "form_name": "Nombre",
+    "form_placeholder_name": "John Doe",
+    "form_invalid_name": "El Nombre no válido.",
+    "form_email": "Correo",
+    "form_placeholder_email": "un_correo@mail.com",
+    "form_invalid_email": "El Correo no válido.",
+    "form_success": "¡Suscrito! A partir de ahora recibirás novedades al correo proporcionado.",
+    "form_error": "No hemos podido suscribirte a la lista de correos, inténtalo una vez más.",
+    "form_submit": "Suscribirme"
+  },
+  "blog": {
+    "title": "Blog de Desarrollo",
+    "description": "Aquí se encuentran los blogs sobre el desarrollo de nuestros juegos."
+  },
+  "careers": {
+    "title": "Trabaja con Nosotros",
+    "description": "Aquí se encuentran las posiciones que estamos buscando llenar en el equipo de Aventuras Bonitas.",
+    "job_description": "Qué esperamos",
+    "job_nice_to_have": "Puntos extras",
+    "job_location": "Ubicación",
+    "why_us_title": "¿Por qué trabajar con nosotros?",
+    "reasons": [
+      "Estamos buscando miembros que se unan a nuestro equipo por los próximos años, este es un compromiso que brindará estabilidad laboral a largo plazo.",
+      "Ofrecemos un ambiente de trabajo cordial, sin crunch, con metodologías de trabajo organizadas, sin cambios de dirección repentinos ni deadlines arbitrarios.",
+      "Tenemos un programa de Mejora personal en el que averiguamos tus metas y hacemos lo que podemos por ayudarte a conseguirlas.",
+      "Estamos trabajando en un juego genial, y puedes ser parte de ello."
+    ],
+    "footer": "Estamos creando un juego increible, y necesitamos tu ayuda para continuar, si te interesa esta posicion llena el formulario.",
+    "apply_job": "Postularme a este trabajo"
+  },
 
-    "header": {
-        "menu": "Menú",
-        "close": "Cerrar",
-        "game": "Game",
-        "services": "Servicios",
-        "about": "Acerca de",
-        "contact": "Suscribete"
-    },
+  "header": {
+    "menu": "Menú",
+    "close": "Cerrar",
+    "game": "Game",
+    "services": "Servicios",
+    "about": "Acerca de",
+    "contact": "Suscribete",
+    "blog": "Blog"
+  },
 
-    "promo_panel": {
-        "button_label": "Ver en acción"
-    },
+  "promo_panel": {
+    "button_label": "Ver en acción"
+  },
 
-    "featured_game": {
-        "page_anchor": "Próximamente",
-        "button": "Suscribirse"
-    },
+  "featured_game": {
+    "page_anchor": "Próximamente",
+    "button": "Suscribirse"
+  },
 
-    "platform": {
-        "release_date": "Lanzamiento",
-        "title": "Disponible en las siguientes plataformas"
-    },
+  "platform": {
+    "release_date": "Lanzamiento",
+    "title": "Disponible en las siguientes plataformas"
+  },
 
-    "about": {
-        "page_anchor": "Sobre nosotros",
-        "title": "“Somos un estudio de Videojuegos haciendo juegos de aventuras.”",
-        "description": "Aventuras Bonitas es un estudio de Videojuegos Independiente de Barranquilla, Colombia. Fundado en 2022 para crear juegos de aventuras.",
-        "button": "Ofertas de empleo"
-    },
+  "about": {
+    "page_anchor": "Sobre nosotros",
+    "title": "“Somos un estudio de Videojuegos haciendo juegos de aventuras.”",
+    "description": "Aventuras Bonitas es un estudio de Videojuegos Independiente de Barranquilla, Colombia. Fundado en 2022 para crear juegos de aventuras.",
+    "button": "Ofertas de empleo"
+  },
 
-    "services": {
-        "page_anchor": "Servicios",
-        "title": "Desarrollo de Software",
-        "description": "Con una década de experiencia, hemos desarrollado soluciones web y móviles utilizadas por cientos de miles. Nos especializamos en pasarelas de pago, diversas apps móviles y herramientas de IA como ChatGPT. Te anímate a contarnos acerca de tu proximo proyecto.",
-        "solutions": [
-            {
-                "id": "mobile",
-                "title": "Desarrollo de Aplicaciones Móviles",
-                "description": "Desarrollo de aplicaciones móviles."
-            },
-            {
-                "id": "games",
-                "title": "Desarrollo de Videojuegos",
-                "description": "Desarrollo de videojuegos."
-            },
-            {
-                "id": "ai",
-                "title": "Integraciones con ChatGPT",
-                "description": "Integraciones con la IA de ChatGPT."
-            },
-            {
-                "id": "web",
-                "title": "Aplicaiones Web",
-                "description": "Desarrollo de aplicaiones Web."
-            }
-        ]
-    },
+  "services": {
+    "page_anchor": "Servicios",
+    "title": "Desarrollo de Software",
+    "description": "Con una década de experiencia, hemos desarrollado soluciones web y móviles utilizadas por cientos de miles. Nos especializamos en pasarelas de pago, diversas apps móviles y herramientas de IA como ChatGPT. Te anímate a contarnos acerca de tu proximo proyecto.",
+    "solutions": [
+      {
+        "id": "mobile",
+        "title": "Desarrollo de Aplicaciones Móviles",
+        "description": "Desarrollo de aplicaciones móviles."
+      },
+      {
+        "id": "games",
+        "title": "Desarrollo de Videojuegos",
+        "description": "Desarrollo de videojuegos."
+      },
+      {
+        "id": "ai",
+        "title": "Integraciones con ChatGPT",
+        "description": "Integraciones con la IA de ChatGPT."
+      },
+      {
+        "id": "web",
+        "title": "Aplicaiones Web",
+        "description": "Desarrollo de aplicaiones Web."
+      }
+    ]
+  },
 
-    "footer": {
-        "blog": "Blog",
-        "jobs": "Trabaja con nosotros",
-        "subscribe": "Suscribirse",
-        "company": "© Aventuras Bonitas"
-    }
+  "footer": {
+    "blog": "Blog",
+    "jobs": "Trabaja con nosotros",
+    "subscribe": "Suscribirse",
+    "company": "© Aventuras Bonitas"
+  }
 }

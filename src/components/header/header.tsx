@@ -57,6 +57,15 @@ export const Header = ({
       },
     },
     {
+      text: "blog",
+      onClick: (main?: boolean) => {
+        if (typeof main !== "boolean" && main !== true) {
+          toggleMenu();
+        }
+        router.replace(`/${lang}/${NAVIGATION.BLOG}`);
+      },
+    },
+    {
       text: "about",
       onClick: (main?: boolean) => {
         if (typeof main !== "boolean" && main !== true) {
@@ -89,13 +98,15 @@ export const Header = ({
     }
 
     window.addEventListener("resize", (e: any) => {
-      if (e.currentTarget.innerWidth >= 768) {
-        if (document.body.classList.contains("overflow-hidden")) {
-          document.body.classList.remove("overflow-hidden");
-        }
-      } else {
-        if (!document.body.classList.contains("overflow-hidden")) {
-          document.body.classList.add("overflow-hidden");
+      if (document.getElementById("sub-menu")) {
+        if (e.currentTarget.innerWidth >= 768) {
+          if (document.body.classList.contains("overflow-hidden")) {
+            document.body.classList.remove("overflow-hidden");
+          }
+        } else {
+          if (!document.body.classList.contains("overflow-hidden")) {
+            document.body.classList.add("overflow-hidden");
+          }
         }
       }
     });
@@ -191,6 +202,7 @@ export const Header = ({
             initial={{ y: 300 }}
             animate={{ y: 0 }}
             exit={{ y: 300, opacity: 0 }}
+            id="sub-menu"
           >
             <div className="bg-white w-full h-full flex 2xl:px-[30%] md:p-16 xs:py-4 xs:px-1 gap-4">
               <div className="flex-1 md:flex xs:hidden md:justify-center lg:justify-end">

@@ -15,6 +15,8 @@ import { Footer } from "@/components/footer/footer";
 import { getFeaturedGame, getSocialNetworks } from "@/api/firebase/games";
 import { fireAppStorage, fireStorageRef } from "@/services/firebase";
 import { getDownloadURL } from "firebase/storage";
+import Image from "next/image";
+import { CarousellGalery } from "@/components/gallery/carouselGallery";
 
 type HomeProps = {
   params: {
@@ -36,16 +38,8 @@ export default async function Home({ params: { lang } }: HomeProps) {
   const promoVideo = await getDownloadURL(firePromoVideo);
 
   const slides = data?.gallery.map((slide: SpringCarouselImage) => ({
-    content: (
-      <img
-        src={slide?.url}
-        alt={slide.name}
-        className="h-auto w-[200px] rounded-lg
-          transition ease-in-out delay-150 hover:scale-150 duration-300
-        "
-      />
-    ),
-    ...slide,
+    url: slide?.url,
+    name: slide.name,
   }));
 
   return (
@@ -74,7 +68,7 @@ export default async function Home({ params: { lang } }: HomeProps) {
 
       {/* Gallery */}
       <div className="relative w-full pt-12 bg-gradient-to-t from-white from-80% z-0">
-        <ContentWrapper className="flex flex-col gap-4">
+        <ContentWrapper className="flex flex-col gap-4 !py-12">
           <BglessPanel
             title={featuredGame.name[lang]}
             description={featuredGame.description[lang]}
@@ -83,18 +77,27 @@ export default async function Home({ params: { lang } }: HomeProps) {
               text: dictionary?.featured_game?.page_anchor,
               url: `#${NAVIGATION.FEATURED_GAME}`,
             }}
-            rightContent={<SpringCarousel slides={slides} />}
+            rightContent={
+              <PlatformPanel
+                dictionary={dictionary?.platform}
+                release_date={featuredGame.release_date}
+                platforms={featuredGame.platforms}
+              />
+            }
             buttonClassname="bg-ab-orange"
             buttonText={dictionary?.featured_game.button}
             redirectUrl={"/subscribe"}
             contactDict={dictionary?.subscribe}
+            carousellImgs={<CarousellGalery images={slides} />}
           />
 
+          {/* 
+          <SpringCarousel slides={slides} />
           <PlatformPanel
             dictionary={dictionary?.platform}
             release_date={featuredGame.release_date}
             platforms={featuredGame.platforms}
-          />
+          /> */}
         </ContentWrapper>
       </div>
       <div className="relative w-full bg-white z-0">
@@ -102,11 +105,13 @@ export default async function Home({ params: { lang } }: HomeProps) {
         <ContentWrapper className="flex flex-col bg-gradient-to-t from-white/90 from-5% via-ab-light-blue via-90% gap-8">
           <BglessPanel
             leftContent={
-              <div className="xl:h-[500px] md:h-72 xs:56 w-full overflow-hidden rounded-lg flex justify-center items-center">
-                <img
-                  className="h-auto w-full"
+              <div className="xl:h-[500px] md:h-72 xs:h-56 mx-auto w-full overflow-hidden flex justify-center items-center">
+                <Image
+                  className="h-auto w-full rounded-[16px] object-cover"
                   src="/about/the_team.jpg"
                   alt="About Us"
+                  width={500}
+                  height={500}
                 />
               </div>
             }

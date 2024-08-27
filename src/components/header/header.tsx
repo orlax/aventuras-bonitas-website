@@ -13,10 +13,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import { HeaderMenuButtonLink } from "@/components/button/header/headerMenuButtonLink";
 import { HeaderSelect } from "@/components/select/header_select/headerSelect";
 import { cn } from "@/lib/utils";
+import { useModal } from "@/store/useModal";
 
 type HeaderProps = {
   lang: any;
   dictionary: any;
+  contactDict: any;
   socialNetworks: {
     id: string;
     name: string;
@@ -28,9 +30,12 @@ export const Header = ({
   lang = "es",
   dictionary,
   socialNetworks,
+  contactDict,
 }: HeaderProps) => {
   const router = useRouter();
   const path = usePathname();
+
+  const { onOpen } = useModal();
 
   const menuItems = [
     {
@@ -66,7 +71,9 @@ export const Header = ({
         if (typeof main !== "boolean" && main !== true) {
           toggleMenu();
         }
-        router.push(`/${lang}/subscribe`);
+
+        onOpen("contact-form", { contactDict });
+        //router.push(`/${lang}/subscribe`);
       },
     },
   ];
@@ -82,7 +89,7 @@ export const Header = ({
     }
 
     window.addEventListener("resize", (e: any) => {
-      if (e.currentTarget.innerWidth >= 320) {
+      if (e.currentTarget.innerWidth >= 768) {
         if (document.body.classList.contains("overflow-hidden")) {
           document.body.classList.remove("overflow-hidden");
         }
@@ -133,11 +140,10 @@ export const Header = ({
             <Image
               src={`/logo/with_name_logo.${lang}.png`}
               alt="Nice Adventures Logo"
-              style={{
-                objectFit: "contain",
-              }}
-              fill
+              className="object-contain"
               priority
+              width={112}
+              height={56}
             />
           </Link>
         </div>

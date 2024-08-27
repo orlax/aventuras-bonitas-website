@@ -26,9 +26,7 @@ export const Footer = ({
         <Image
           src={`/logo/with_name_logo.${lang}.png`}
           alt="Nice Adventures Logo"
-          style={{
-            objectFit: "contain",
-          }}
+          className="object-contain"
           priority
           width={200}
           height={200}

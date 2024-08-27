@@ -22,6 +22,7 @@ export const AppLayout = async ({ children, lang }: AppLayoutProps) => {
       <Header
         lang={lang}
         dictionary={dictionary.header}
+        contactDict={dictionary.subscribe}
         socialNetworks={socialNetworks}
       />
       {children}

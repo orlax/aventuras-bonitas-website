@@ -7,6 +7,7 @@ import {
   LOCALES,
 } from "../../dictionaries";
 import { AppLayout } from "@/components/layouts/appLayout";
+import ModalProvider from "@/components/providers/modalProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,6 +37,7 @@ export default function RootLayout({
     <html lang={params.lang}>
       <body className={inter.className} suppressHydrationWarning>
         <AppLayout lang={params.lang}>{children}</AppLayout>
+        <ModalProvider />
       </body>
     </html>
   );

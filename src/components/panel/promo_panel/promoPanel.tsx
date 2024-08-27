@@ -25,13 +25,11 @@ export const PromoPanel = ({
 }: PromoPanelProps) => {
   const [videoPlayerVisible, setVideoPlayerVisible] = useState(false);
   const [promotionalImage, setPromotionalImage] = useState("");
-  const componentLoaded = useRef(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    if (!componentLoaded.current) {
-      componentLoaded.current = true;
-      getPromotionalImage();
-    }
+    setIsMounted(true);
+    getPromotionalImage();
   }, []);
 
   const getPromotionalImage = async () => {
@@ -50,6 +48,8 @@ export const PromoPanel = ({
     videoPlayerVisible && document.body.classList.remove("overflow-hidden");
   };
 
+  if (!isMounted) return <></>;
+
   return (
     <>
       <article
@@ -58,29 +58,33 @@ export const PromoPanel = ({
                 md:pr-9 md:pb-1 xs:p-0 z-0 ${className}`}
       >
         <section className="relative flex md:justify-end xs:justify-center">
-          <Image
-            className="lg:h-[450px] md:h-[365px] md:block xs:hidden w-auto z-0 
+          {promotionalImage && (
+            <Image
+              className="lg:h-[450px] md:h-[365px] md:block xs:hidden w-auto z-0 
                         md:absolute md:top-0 xs:relative
                         md:-translate-y-9 md:translate-x-6
                         xs:-translate-y-5
                         transition delay-500 opacity-100"
-            src={promotionalImage}
-            alt="Featured Game Promo"
-            width={640}
-            height={905}
-            priority
-          />
-          <div className="md:hidden xs:flex h-[150px] overflow-y-hidden -translate-y-7">
-            <Image
-              className="h-[250px] w-auto 
-                            xs:relative"
               src={promotionalImage}
               alt="Featured Game Promo"
               width={640}
               height={905}
               priority
             />
-          </div>
+          )}
+          {promotionalImage && (
+            <div className="md:hidden xs:flex h-[150px] overflow-y-hidden -translate-y-7">
+              <Image
+                className="h-[250px] w-auto 
+                            xs:relative"
+                src={promotionalImage}
+                alt="Featured Game Promo"
+                width={640}
+                height={905}
+                priority
+              />
+            </div>
+          )}
         </section>
         <section
           className="flex flex-col gap-5 items-start justify-center relative z-10

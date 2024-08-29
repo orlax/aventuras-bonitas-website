@@ -2,9 +2,6 @@
 
 import React, { useState } from "react";
 import { AnimatePresence, motion, PanInfo } from "framer-motion";
-import { SpringCarouselImage } from "@/components/images/spring_carousel/springCarousel";
-import { useOutsideClick } from "@/hooks/useClickOutside";
-import Image from "next/image";
 import { useModal } from "@/store/useModal";
 
 interface CarouselGalleryProps {

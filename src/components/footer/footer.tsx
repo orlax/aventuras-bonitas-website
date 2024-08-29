@@ -1,5 +1,6 @@
 "use client";
 
+import { Locale } from "@/dictionaries";
 import { useModal } from "@/store/useModal";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,14 +16,14 @@ export const Footer = ({
   currentYear: number;
   footerUrls: { url: string; text: string }[];
   socialNetworks: { id: string; url: string }[];
-  lang: any;
+  lang: Locale;
   dictionary: any;
   contactDict: any;
 }) => {
   const { onOpen } = useModal();
 
   const triggerContactForm = () => {
-    onOpen("contact-form", { contactDict });
+    onOpen("contact-form", { contactDict, lang });
   };
   return (
     <footer

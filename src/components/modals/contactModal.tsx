@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { ContentWrapper } from "../container/page_wrapper/contentWrapper";
 import Image from "next/image";
 import { SubscribeForm } from "../form/subscribeForm";
-import { getDictionary } from "@/dictionaries";
 import { XCircleIcon } from "@heroicons/react/24/solid";
 
 export const ContactModal = () => {
@@ -13,7 +12,7 @@ export const ContactModal = () => {
 
   const { isOpen, type, data, onClose } = useModal();
   const isModalOpen = isOpen && type === "contact-form";
-  const { contactDict } = data;
+  const { contactDict, lang } = data;
 
   useEffect(() => {
     setIsMounted(isModalOpen);
@@ -28,7 +27,7 @@ export const ContactModal = () => {
     }, 300);
   }
 
-  if (dismount) return <></>;
+  if (dismount || !lang) return <></>;
 
   const exitModalManual = () => {
     onClose();
@@ -51,7 +50,7 @@ export const ContactModal = () => {
           />
           <h3 className="text-3xl text-ab-black">{contactDict?.title}</h3>
         </section>
-        <SubscribeForm dictionary={contactDict} />
+        <SubscribeForm dictionary={contactDict} lang={lang} />
         <button
           onClick={() => exitModalManual()}
           className="absolute top-32 right-32"

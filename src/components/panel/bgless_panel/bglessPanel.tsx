@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { Locale } from "@/dictionaries";
 
 type BglessPanelProps = {
   className?: string;
@@ -24,6 +25,7 @@ type BglessPanelProps = {
   redirectUrl?: string;
   contactDict?: any;
   carousellImgs?: ReactNode;
+  lang?: Locale;
 };
 
 export const BglessPanel = ({
@@ -38,6 +40,7 @@ export const BglessPanel = ({
   redirectUrl,
   contactDict,
   carousellImgs,
+  lang,
 }: BglessPanelProps) => {
   const router = useRouter();
 
@@ -46,7 +49,9 @@ export const BglessPanel = ({
   const handleButtonClick = () =>
     redirectUrl && redirectUrl !== "/subscribe"
       ? router.push(redirectUrl)
-      : onOpen("contact-form", { contactDict });
+      : lang
+      ? onOpen("contact-form", { contactDict, lang })
+      : null;
 
   return (
     <article

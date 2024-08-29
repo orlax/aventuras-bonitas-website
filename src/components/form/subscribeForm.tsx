@@ -1,10 +1,18 @@
 "use client";
 
+import { Locale } from "@/dictionaries";
+import { ArrowPathIcon } from "@heroicons/react/24/solid";
 import { FormEvent, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-export const SubscribeForm = ({ dictionary }: { dictionary: any }) => {
+export const SubscribeForm = ({
+  dictionary,
+  lang,
+}: {
+  dictionary: any;
+  lang: Locale;
+}) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [submiting, setSubmiting] = useState(false);
@@ -22,23 +30,21 @@ export const SubscribeForm = ({ dictionary }: { dictionary: any }) => {
     if (validEmail && validName) {
       setSubmiting(true);
       try {
-        const result = await fetch(
-          process.env.NEXT_PUBLIC_EMAIL_PROVIDER as string,
-          {
-            cache: "no-store",
-            method: "POST",
-            body: JSON.stringify({
-              b_a480b97af16f9410c010f711f_5b4d5992f1: "",
-              tags: "2964068",
-              FNAME: name,
-              EMAIL: email,
-            }),
-          }
-        );
+        const result = await fetch("/api/new-sub", {
+          cache: "no-store",
+          method: "POST",
+          body: JSON.stringify({
+            lang: lang,
+            name: name,
+            email: email,
+          }),
+        });
         if ([200, 201].includes(result.status)) {
           setName("");
           setEmail("");
           toast(dictionary?.form_success, { type: "success", autoClose: 3000 });
+        } else {
+          toast(dictionary?.form_error, { type: "error", autoClose: 3000 });
         }
       } catch (error) {
         toast(dictionary?.form_error, { type: "error", autoClose: 3000 });
@@ -137,7 +143,15 @@ export const SubscribeForm = ({ dictionary }: { dictionary: any }) => {
             submiting
           }
         >
-          {dictionary?.form_submit}
+          {submiting ? (
+            <ArrowPathIcon
+              className="text-white animate-[spin_1.5s_linear_infinite]"
+              width={20}
+              height={20}
+            />
+          ) : (
+            dictionary?.form_submit
+          )}
         </button>
       </form>
       <ToastContainer />

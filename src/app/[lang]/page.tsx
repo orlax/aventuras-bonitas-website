@@ -89,6 +89,7 @@ export default async function Home({ params: { lang } }: HomeProps) {
             redirectUrl={"/subscribe"}
             contactDict={dictionary?.subscribe}
             carousellImgs={<CarousellGalery images={slides} />}
+            lang={lang}
           />
 
           {/* 

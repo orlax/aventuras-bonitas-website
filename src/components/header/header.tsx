@@ -14,9 +14,10 @@ import { HeaderMenuButtonLink } from "@/components/button/header/headerMenuButto
 import { HeaderSelect } from "@/components/select/header_select/headerSelect";
 import { cn } from "@/lib/utils";
 import { useModal } from "@/store/useModal";
+import { Locale } from "@/dictionaries";
 
 type HeaderProps = {
-  lang: any;
+  lang: Locale;
   dictionary: any;
   contactDict: any;
   socialNetworks: {
@@ -81,7 +82,7 @@ export const Header = ({
           toggleMenu();
         }
 
-        onOpen("contact-form", { contactDict });
+        onOpen("contact-form", { contactDict, lang });
         //router.push(`/${lang}/subscribe`);
       },
     },

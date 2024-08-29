@@ -1,10 +1,12 @@
 import { SpringCarouselImage } from "@/components/images/spring_carousel/springCarousel";
+import { Locale } from "@/dictionaries";
 import { create } from "zustand";
 
 export type ModalType = "contact-form" | "image";
 
 interface ModalData {
   contactDict?: any;
+  lang?: Locale;
   image?: SpringCarouselImage;
   onCloseAction?: () => void;
 }

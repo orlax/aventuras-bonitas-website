@@ -118,9 +118,13 @@ export const CarousellGalery: React.FC<CarouselGalleryProps> = ({ images }) => {
   };
 
   const showImage = (index: number) => {
-    const selectedSlide = images[index];
+    const newImages = images.map((img) => ({
+      url: img.url,
+      name: img.name,
+      id: 0,
+    }));
 
-    onOpen("image", { image: { ...selectedSlide, id: 0 } });
+    onOpen("image", { images: newImages, imageIndex: index });
   };
 
   return (

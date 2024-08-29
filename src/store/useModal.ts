@@ -7,7 +7,8 @@ export type ModalType = "contact-form" | "image";
 interface ModalData {
   contactDict?: any;
   lang?: Locale;
-  image?: SpringCarouselImage;
+  imageIndex?: number;
+  images?: SpringCarouselImage[];
   onCloseAction?: () => void;
 }
 

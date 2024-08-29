@@ -190,7 +190,8 @@ export const Header = ({
             <li className="flex flex-1" key={`header_menu_item_full_lang`}>
               <HeaderMenuButtonLink
                 element={<HeaderSelect lang={lang} />}
-                onClick={(main, newLang) => {}}
+                onClick={() => {}}
+                noButton
               />
             </li>
           </ul>

@@ -28,7 +28,7 @@ export default async function Subscribe({
             {dictionary.subscribe.title}
           </h3>
         </section>
-        <SubscribeForm dictionary={dictionary.subscribe} />
+        <SubscribeForm dictionary={dictionary.subscribe} lang={lang} />
       </ContentWrapper>
     </main>
   );

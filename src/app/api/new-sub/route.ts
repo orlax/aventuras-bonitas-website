@@ -68,6 +68,24 @@ export async function POST(req: Request) {
 
     return NextResponse.json(existEmail, { status: 200 });
   } catch (error: any) {
-    return NextResponse.json({ error: error }, { status: 500 });
+    if (error.response.text) {
+      try {
+        const jsonParseError = JSON.parse(error.response.text);
+
+        return NextResponse.json(
+          { error: jsonParseError.title },
+          { status: 500 }
+        );
+      } catch (error) {
+        return NextResponse.json(
+          { error: "Internal server error" },
+          { status: 500 }
+        );
+      }
+    }
+    return NextResponse.json(
+      { error: "Internal server error" },
+      { status: 500 }
+    );
   }
 }

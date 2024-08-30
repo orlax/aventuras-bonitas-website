@@ -56,6 +56,10 @@ export const ImageModal = () => {
     }
   }, [isModalOpen]);
 
+  useEffect(() => {
+    setIndex(imageIndex);
+  }, [imageIndex]);
+
   if (!isMounted && !isModalOpen) {
     setTimeout(() => {
       setDismount(true);

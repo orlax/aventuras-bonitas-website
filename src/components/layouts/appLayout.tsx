@@ -18,7 +18,7 @@ export const AppLayout = async ({ children, lang }: AppLayoutProps) => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="block relative w-full h-full overflow-y-auto overflow-x-hidden">
+    <div className="block relative w-full h-full overflow-y-auto overflow-x-hidden scroll-smooth">
       <Header
         lang={lang}
         dictionary={dictionary.header}

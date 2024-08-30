@@ -8,6 +8,7 @@ import {
 } from "../../dictionaries";
 import { AppLayout } from "@/components/layouts/appLayout";
 import ModalProvider from "@/components/providers/modalProvider";
+import { RenderAnimatePage } from "@/components/renderPageAnimate";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,7 +37,9 @@ export default function RootLayout({
   return (
     <html lang={params.lang}>
       <body className={inter.className} suppressHydrationWarning>
-        <AppLayout lang={params.lang}>{children}</AppLayout>
+        <AppLayout lang={params.lang}>
+          <RenderAnimatePage>{children}</RenderAnimatePage>
+        </AppLayout>
         <ModalProvider />
       </body>
     </html>

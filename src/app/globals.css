@@ -17,11 +17,18 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
+  width: 100%;
+    height: 100%;
+    overflow: hidden !important;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
+  width: 100%;
+  height: 100%;
+  overflow: hidden !important;
+  scroll-behavior: smooth !important;
   background: linear-gradient(
       to bottom,
       transparent,

@@ -1,18 +1,13 @@
 import { ContentWrapper } from "@/components/container/page_wrapper/contentWrapper";
-import { Header } from "@/components/header/header";
-import {
-  SpringCarousel,
-  SpringCarouselImage,
-} from "@/components/images/spring_carousel/springCarousel";
+import { SpringCarouselImage } from "@/components/images/spring_carousel/springCarousel";
 import { BglessPanel } from "@/components/panel/bgless_panel/bglessPanel";
 import { PlatformPanel } from "@/components/panel/featured_game/platformPanel";
 import { PromoPanel } from "@/components/panel/promo_panel/promoPanel";
-import { getFooterUrls, NAVIGATION } from "@/lib";
-import { getDictionary, Locale } from "../../dictionaries";
+import { NAVIGATION } from "@/lib";
+import { getDictionary, Locale } from "@/dictionaries";
 import { promises as fs } from "fs";
 import { ServicesPanel } from "@/components/panel/services_panel/servicesPanel";
-import { Footer } from "@/components/footer/footer";
-import { getFeaturedGame, getSocialNetworks } from "@/api/firebase/games";
+import { getFeaturedGame } from "@/api/firebase/games";
 import { fireAppStorage, fireStorageRef } from "@/services/firebase";
 import { getDownloadURL } from "firebase/storage";
 import Image from "next/image";

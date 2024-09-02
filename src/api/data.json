@@ -1,157 +1,201 @@
 {
-    "social_networks": [
+  "social_networks": [
+    {
+      "id": "tiktok",
+      "name": "TikTok",
+      "url": "https://www.tiktok.com/@aventurasbonitas.games"
+    },
+    {
+      "id": "youtube",
+      "name": "Youtube",
+      "url": "https://www.youtube.com/channel/UCj6GYJhAIXQGVeSKn5UpoZQ"
+    },
+    {
+      "id": "instagram",
+      "name": "Instagram",
+      "url": "https://www.instagram.com/aventurasbonitas/"
+    }
+  ],
+  "blog": [
+    {
+      "date": "20/02/2024",
+      "description": {
+        "en": "Fixing the WORST MECHANIC in our game.",
+        "es": "Arreglando la PEOR MECÁNICA de nuestro juego.",
+        "jp": "ゲームの最悪のメカニックを修正中。"
+      },
+      "link": "https://www.youtube.com/embed/3eNApqOUBcY?si=cANYy6VfzBJUqQSP",
+      "title": {
+        "en": "Adventure in Hender Castle Devlog #2",
+        "es": "Aventura en el Castillo de Hender Devlog #2",
+        "jp": "ヘンダー城の冒険 デブログ#2"
+      }
+    },
+    {
+      "date": "09/09/2023",
+      "description": {
+        "en": "We are in the first devlog of Adventure in Hender Castle, We went to the SOFA!",
+        "es": "Estamos en el primer devlog de Aventura en el Castillo de Hender, ¡Fuimos al SOFA!.",
+        "jp": "ヘンダー城の初めてのデブログ、SOFAに行ってきました!"
+      },
+      "link": "https://www.youtube.com/embed/FqajxC0BJHA?si=ggU3xOLUlzHADtiv",
+      "title": {
+        "en": "Adventure in Hender Castle Devlog #1",
+        "es": "Aventura en el Castillo de Hender Devlog #1",
+        "jp": "ヘンダー城の冒険 デブログ#1"
+      }
+    },
+    {
+      "date": "20/07/2023",
+      "description": {
+        "en": "Halfway through the year, I realize that we won't be releasing a video game this year either. But that's not the whole story.",
+        "es": "Transcurrida la mitad del año, me doy cuenta de que este año tampoco publicaremos un videojuego. Pero esa no es toda la historia.",
+        "jp": "年の半分が経過しましたが、今年もビデオゲームをリリースしないことに気付きます。しかし、それだけが物語ではありません。"
+      },
+      "link": "https://www.youtube.com/embed/S4IlSpnTP6s?si=QbIu-LEerZCOmkhv",
+      "title": {
+        "en": "Adventure in Hender Castle Devlog #0",
+        "es": "Aventura en el Castillo de Hender Devlog #0",
+        "jp": "ヘンダー城の冒険 デブログ#0"
+      }
+    }
+  ],
+  "careers": [
+    {
+      "title": "Artista Generalista 3D",
+      "description": [
+        "Estamos buscando un artista generalista 3D, alguien que pueda hacerse cargo de todo el pipeline de arte de nuestros juegos. Desde el diseño de personajes y escenarios, animación, rigging, texturizado y su integración en el motor de juegos de Unity.",
+        "Somos un equipo pequeño apuntando a crear juegos increíbles, buscamos a un candidato que pueda trabajar de forma independiente, que pueda aprender nuevas habilidades y tecnologías. Que nos proponga ideas nuevas y comparta esa pasión por hacer un trabajo excepcional."
+      ],
+      "specs": [
+        "Colaborar con el Diseñador del juego para entender e interpretar conceptos visuales.",
+        "Crear assets 3D incluyendo personajes, ambientes y accesorios.",
+        "Diseñar e ilustrar arte conceptual.",
+        "Crear texturas y animaciones.",
+        "Trabajar de cerca con los desarrolladores de gameplay para integrar los assets en el motor de juegos.",
+        "Recibir feedback e iterar sobre los diseños realizados."
+      ],
+      "nice_to_have": [
+        "Saber inglés en nivel B1/B2 o superior.",
+        "Experiencia en diseño e ilustración 2D.",
+        "Tener experiencia en la industria de videojuegos.",
+        "Tener experiencia trabajando con sistemas de control de versiones.",
+        "Tener experiencia trabajando con Unity."
+      ],
+      "lang": "es"
+    },
+    {
+      "title": "3D Generalist Artist",
+      "description": [
+        "We are seeking a 3D generalist artist, someone who can handle the entire art pipeline of our games. From character and environment design, animation, rigging, texturing, to integration into the Unity game engine.",
+        "We are a small team aiming to create amazing games, and we are looking for a candidate who can work independently, learn new skills and technologies, propose new ideas, and share a passion for delivering exceptional work."
+      ],
+      "specs": [
+        "Collaborate with the Game Designer to understand and interpret visual concepts.",
+        "Create 3D assets including characters, environments, and props.",
+        "Design and illustrate conceptual art.",
+        "Create textures and animations.",
+        "Work closely with gameplay developers to integrate assets into the game engine.",
+        "Receive feedback and iterate on designs made."
+      ],
+      "nice_to_have": [
+        "English proficiency at level B1/B2 or above.",
+        "Experience in 2D design and illustration.",
+        "Experience in the video game industry.",
+        "Experience working with version control systems.",
+        "Experience working with Unity."
+      ],
+      "lang": "en"
+    },
+    {
+      "title": "3Dジェネラリストアーティスト",
+      "description": [
+        "私たちは3Dジェネラリストアーティストを探しています。ゲームのアートパイプライン全体を担当できる人、キャラクターや背景のデザイン、アニメーション、リギング、テクスチャリング、Unityのゲームエンジンへの統合などを行える方を求めています。",
+        "私たちは素晴らしいゲームを作りたいと考えている小さなチームです。独立して働ける候補者、新しいスキルやテクノロジーを学び、新しいアイデアを提案し、その情熱を共有できる候補者を求めています。"
+      ],
+      "specs": [
+        "ゲームデザイナーと協力してビジュアルコンセプトを理解し解釈する。",
+        "キャラクター、環境、アクセサリーなどの3Dアセットを作成する。",
+        "コンセプトアートを設計しイラストレーションする。",
+        "テクスチャやアニメーションを作成する。",
+        "ゲームプレイの開発者と協力してアセットをゲームエンジンに統合する。",
+        "デザインにフィードバックを受け、それに基づいてデザインを改善する。"
+      ],
+      "nice_to_have": [
+        "B1/B2レベル以上の英語力があること。",
+        "2Dデザインとイラストレーションの経験。",
+        "ゲーム業界での経験。",
+        "バージョン管理システムの経験。",
+        "Unityでの作業経験。"
+      ],
+      "lang": "jp"
+    }
+  ],
+  "gallery": [
+    {
+      "id": 1,
+      "url": "/storage/gameplay_01.jpg",
+      "name": "gameplay 01"
+    },
+    {
+      "id": 2,
+      "url": "/storage/gameplay_02.jpg",
+      "name": "gameplay 02"
+    },
+    {
+      "id": 3,
+      "url": "/storage/gameplay_03.jpg",
+      "name": "gameplay 03"
+    },
+    {
+      "id": 4,
+      "url": "/storage/gameplay_04.jpg",
+      "name": "gameplay 04"
+    }
+  ],
+  "games": [
+    {
+      "description": {
+        "en": "Use magical powers to explore a large castle full of mysteries and traps while searching for the most powerful spell in the world.",
+        "es": "Usa poderes mágicos para explorar un gran castillo lleno de misterios y trampas mientras buscas el Hechizo mas poderoso del mundo.",
+        "jp": "魔法の力を使って、謎とトラップに満ちた大きな城を探索し、世界で最も強力な呪文を探し求めましょう。"
+      },
+      "featured": true,
+      "name": {
+        "en": "Adventure in Hender's Castle",
+        "es": "Aventura en el Castillo de Hender",
+        "jp": "ヘンダーズキャッスルの冒険"
+      },
+      "platforms": [
         {
-            "id": "tiktok",
-            "name": "TikTok",
-            "url": "https://www.tiktok.com/@aventurasbonitas0"
+          "name": "steam",
+          "slug": "steam"
         },
         {
-            "id": "youtube",
-            "name": "Youtube",
-            "url": "https://www.youtube.com/channel/UCj6GYJhAIXQGVeSKn5UpoZQ"
+          "name": "nintendo switch",
+          "slug": "switch"
         },
         {
-            "id": "instagram",
-            "name": "Instagram",
-            "url": "https://www.instagram.com/aventurasbonitas/"
+          "name": "Xbox",
+          "slug": "xbox"
         }
-    ],
-    "blog": [
-        {
-            "date": "20/02/2024",
-            "link": "https://www.youtube.com/embed/3eNApqOUBcY?si=cANYy6VfzBJUqQSP",
-            "title": {
-              "es": "Aventura en el Castillo de Hender Devlog #2",
-              "en": "Adventure in Hender Castle Devlog #2",
-              "jp": "ヘンダー城の冒険 デブログ#2"
-            },
-            "description": {
-              "es": "Arreglando la PEOR MECÁNICA de nuestro juego.",
-              "en": "Fixing the WORST MECHANIC in our game.",
-              "jp": "ゲームの最悪のメカニックを修正中。"
-            }
+      ],
+      "promotional": {
+        "en": {
+          "description": "Show your bravery by facing dangers that await a secret hidden for decades.",
+          "title": "Use magical powers to explore a grand castle."
         },
-        {
-            "date": "09/09/2023",
-            "link": "https://www.youtube.com/embed/FqajxC0BJHA?si=ggU3xOLUlzHADtiv",
-            "title": {
-              "es": "Aventura en el Castillo de Hender Devlog #1",
-              "en": "Adventure in Hender Castle Devlog #1",
-              "jp": "ヘンダー城の冒険 デブログ#1"
-            },
-            "description": {
-              "es": "Estamos en el primer devlog de Aventura en el Castillo de Hender, ¡Fuimos al SOFA!.",
-              "en": "We are in the first devlog of Adventure in Hender Castle, We went to the SOFA!",
-              "jp": "ヘンダー城の初めてのデブログ、SOFAに行ってきました!"
-            }
+        "es": {
+          "description": "Demuestra tu valentía al enfrentar peligros que aguardan un secreto oculto por décadas.",
+          "title": "Explora el gran castillo usando poderes mágicos."
         },
-        {
-            "date": "20/07/2023",
-            "link": "https://www.youtube.com/embed/S4IlSpnTP6s?si=QbIu-LEerZCOmkhv",
-            "title": {
-              "es": "Aventura en el Castillo de Hender Devlog #0",
-              "en": "Adventure in Hender Castle Devlog #0",
-              "jp": "ヘンダー城の冒険 デブログ#0"
-            },
-            "description": {
-              "es": "Transcurrida la mitad del año, me doy cuenta de que este año tampoco publicaremos un videojuego. Pero esa no es toda la historia.",
-              "en": "Halfway through the year, I realize that we won't be releasing a video game this year either. But that's not the whole story.",
-              "jp": "年の半分が経過しましたが、今年もビデオゲームをリリースしないことに気付きます。しかし、それだけが物語ではありません。"
-            }
+        "jp": {
+          "description": "数十年にわたって秘密にされていた危険に立ち向かい、あなたの勇気を示してください。",
+          "title": "魔法の力を使って壮大な城を探索。"
         }
-    ],
-    "careers": [
-        {
-            "title": "Artista Generalista 3D",
-            "description": [
-                "Estamos buscando un artista generalista 3D, alguien que pueda hacerse cargo de todo el pipeline de arte de nuestros juegos. Desde el diseño de personajes y escenarios, animación, rigging, texturizado y su integración en el motor de juegos de Unity.",
-                "Somos un equipo pequeño apuntando a crear juegos increíbles, buscamos a un candidato que pueda trabajar de forma independiente, que pueda aprender nuevas habilidades y tecnologías. Que nos proponga ideas nuevas y comparta esa pasión por hacer un trabajo excepcional."
-            ],
-            "specs": [
-                "Colaborar con el Diseñador del juego para entender e interpretar conceptos visuales.",
-                "Crear assets 3D incluyendo personajes, ambientes y accesorios.",
-                "Diseñar e ilustrar arte conceptual.",
-                "Crear texturas y animaciones.",
-                "Trabajar de cerca con los desarrolladores de gameplay para integrar los assets en el motor de juegos.",
-                "Recibir feedback e iterar sobre los diseños realizados."
-            ],
-            "nice_to_have": [
-                "Saber inglés en nivel B1/B2 o superior.",
-                "Experiencia en diseño e ilustración 2D.",
-                "Tener experiencia en la industria de videojuegos.",
-                "Tener experiencia trabajando con sistemas de control de versiones.",
-                "Tener experiencia trabajando con Unity."
-            ],
-            "lang": "es"
-        },
-        {
-            "title": "3D Generalist Artist",
-            "description": [
-                "We are seeking a 3D generalist artist, someone who can handle the entire art pipeline of our games. From character and environment design, animation, rigging, texturing, to integration into the Unity game engine.",
-                "We are a small team aiming to create amazing games, and we are looking for a candidate who can work independently, learn new skills and technologies, propose new ideas, and share a passion for delivering exceptional work."
-            ],
-            "specs": [
-                "Collaborate with the Game Designer to understand and interpret visual concepts.",
-                "Create 3D assets including characters, environments, and props.",
-                "Design and illustrate conceptual art.",
-                "Create textures and animations.",
-                "Work closely with gameplay developers to integrate assets into the game engine.",
-                "Receive feedback and iterate on designs made."
-            ],
-            "nice_to_have": [
-                "English proficiency at level B1/B2 or above.",
-                "Experience in 2D design and illustration.",
-                "Experience in the video game industry.",
-                "Experience working with version control systems.",
-                "Experience working with Unity."
-            ],
-            "lang": "en"
-        },
-        {
-            "title": "3Dジェネラリストアーティスト",
-            "description": [
-                "私たちは3Dジェネラリストアーティストを探しています。ゲームのアートパイプライン全体を担当できる人、キャラクターや背景のデザイン、アニメーション、リギング、テクスチャリング、Unityのゲームエンジンへの統合などを行える方を求めています。",
-                "私たちは素晴らしいゲームを作りたいと考えている小さなチームです。独立して働ける候補者、新しいスキルやテクノロジーを学び、新しいアイデアを提案し、その情熱を共有できる候補者を求めています。"
-            ],
-            "specs": [
-                "ゲームデザイナーと協力してビジュアルコンセプトを理解し解釈する。",
-                "キャラクター、環境、アクセサリーなどの3Dアセットを作成する。",
-                "コンセプトアートを設計しイラストレーションする。",
-                "テクスチャやアニメーションを作成する。",
-                "ゲームプレイの開発者と協力してアセットをゲームエンジンに統合する。",
-                "デザインにフィードバックを受け、それに基づいてデザインを改善する。"
-            ],
-            "nice_to_have": [
-                "B1/B2レベル以上の英語力があること。",
-                "2Dデザインとイラストレーションの経験。",
-                "ゲーム業界での経験。",
-                "バージョン管理システムの経験。",
-                "Unityでの作業経験。"
-            ],
-            "lang": "jp"
-        }
-    ],
-    "gallery": [
-        {
-            "id": 1,
-            "url": "/storage/gameplay_01.jpg",
-            "name": "gameplay 01"
-        },
-        {
-            "id": 2,
-            "url": "/storage/gameplay_02.jpg",
-            "name": "gameplay 02"
-        },
-        {
-            "id": 3,
-            "url": "/storage/gameplay_03.jpg",
-            "name": "gameplay 03"
-        },
-        {
-            "id": 4,
-            "url": "/storage/gameplay_04.jpg",
-            "name": "gameplay 04"
-        }
-    ]
-    
+      },
+      "release_date": "Q4 2024",
+      "slug": "ai-henders-castle"
+    }
+  ]
 }

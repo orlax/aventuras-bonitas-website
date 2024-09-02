@@ -1,10 +1,8 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import { SimpleBackdrop } from "@/components/backdrop/simpleBackdrop";
 import { PrimaryButton } from "@/components/button/primary_button/primaryButton";
-import { fireAppStorage, fireStorageRef } from "@/services/firebase";
-import { getDownloadURL } from "firebase/storage";
+import { useModal } from "@/store/useModal";
 
 type PromoPanelProps = {
   lang: any;
@@ -23,30 +21,19 @@ export const PromoPanel = ({
   promoVideoURL = "/featured_game/gameplay_video.mp4",
   buttonLabel,
 }: PromoPanelProps) => {
-  const [videoPlayerVisible, setVideoPlayerVisible] = useState(false);
-  const [promotionalImage, setPromotionalImage] = useState("");
   const [isMounted, setIsMounted] = useState(false);
+
+  const { onOpen } = useModal();
 
   useEffect(() => {
     setIsMounted(true);
-    getPromotionalImage();
   }, []);
 
-  const getPromotionalImage = async () => {
-    const firePromoImage = fireStorageRef(
-      fireAppStorage,
-      `/assets/featured_game/home_promo.${lang}.png`
-    );
-    const image = await getDownloadURL(firePromoImage);
-    setPromotionalImage(image);
+  const toggleVideoPlayer = () => {
+    onOpen("video-modal", { video: promoVideoURL });
   };
 
-  const toggleVideoPlayer = () => {
-    window.scrollTo({ top: 0, left: 0 });
-    setVideoPlayerVisible(!videoPlayerVisible);
-    !videoPlayerVisible && document.body.classList.add("overflow-hidden");
-    videoPlayerVisible && document.body.classList.remove("overflow-hidden");
-  };
+  const promotionalImage = `/featured_game/home_promo.${lang}.png`;
 
   if (!isMounted) return <></>;
 
@@ -98,13 +85,6 @@ export const PromoPanel = ({
           </PrimaryButton>
         </section>
       </article>
-      {videoPlayerVisible && (
-        <SimpleBackdrop onClickOutside={toggleVideoPlayer}>
-          <video className="h-[80vh]" autoPlay controls id="gameplay_video">
-            <source src={promoVideoURL} type="video/mp4" />
-          </video>
-        </SimpleBackdrop>
-      )}
     </>
   );
 };

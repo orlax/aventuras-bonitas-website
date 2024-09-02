@@ -9,7 +9,7 @@ export const ContentWrapper = ({
 }: {
   className?: string;
   children: ReactNode | ReactNode[];
-  ref?: LegacyRef<HTMLDivElement> | undefined;
+  ref?: React.MutableRefObject<any> | undefined;
 }) => {
   return (
     <div

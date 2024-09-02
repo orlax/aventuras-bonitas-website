@@ -5,6 +5,9 @@ import { ContentWrapper } from "../container/page_wrapper/contentWrapper";
 import Image from "next/image";
 import { SubscribeForm } from "../form/subscribeForm";
 import { XCircleIcon } from "@heroicons/react/24/solid";
+import { useOutsideClick } from "@/hooks/useClickOutside";
+
+let timer: NodeJS.Timeout;
 
 export const ContactModal = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -14,17 +17,26 @@ export const ContactModal = () => {
   const isModalOpen = isOpen && type === "contact-form";
   const { contactDict, lang } = data;
 
+  const ref = useOutsideClick(() => onClose(), true);
+
   useEffect(() => {
     setIsMounted(isModalOpen);
     if (isModalOpen) {
+      clearTimeout(timer);
       setDismount(false);
     }
   }, [isModalOpen]);
 
   if (!isMounted && !isModalOpen) {
-    setTimeout(() => {
-      setDismount(true);
-    }, 300);
+    timer = setTimeout(() => {
+      if (!isModalOpen) {
+        setDismount(true);
+      }
+    }, 1000);
+  } else {
+    if (dismount) {
+      setDismount(false);
+    }
   }
 
   if (dismount || !lang) return <></>;
@@ -40,23 +52,25 @@ export const ContactModal = () => {
       initial={{ top: "-100%", opacity: 0 }}
     >
       <ContentWrapper className=" h-auto w-full  flex items-center gap-4 mx-auto max-w-[800px] bg-white !p-6 rounded-md">
-        <section className="flex flex-col items-center text-center gap-4 relative">
-          <Image
-            className="h-64 w-auto rounded-full"
-            src="/logo/logo512.png"
-            alt="company-logo"
-            width={512}
-            height={512}
-          />
-          <h3 className="text-3xl text-ab-black">{contactDict?.title}</h3>
-        </section>
-        <SubscribeForm dictionary={contactDict} lang={lang} />
-        <button
-          onClick={() => exitModalManual()}
-          className="absolute top-32 right-32"
-        >
-          <XCircleIcon width={35} height={35} />
-        </button>
+        <div className="flex w-full h-full" ref={ref}>
+          <section className="flex flex-col items-center text-center gap-4 relative">
+            <Image
+              className="h-64 w-auto rounded-full"
+              src="/logo/logo512.png"
+              alt="company-logo"
+              width={512}
+              height={512}
+            />
+            <h3 className="text-3xl text-ab-black">{contactDict?.title}</h3>
+          </section>
+          <SubscribeForm dictionary={contactDict} lang={lang} />
+          <button
+            onClick={() => exitModalManual()}
+            className="absolute top-32 right-32"
+          >
+            <XCircleIcon width={35} height={35} />
+          </button>
+        </div>
       </ContentWrapper>
     </motion.div>
   );

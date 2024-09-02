@@ -36,11 +36,11 @@ const swipePower = (offset: number, velocity: number) => {
   return Math.abs(offset) * velocity;
 };
 
+let timer: NodeJS.Timeout;
+
 export const ImageModal = () => {
   const [isMounted, setIsMounted] = useState(false);
   const [dismount, setDismount] = useState(true);
-
-  const ref = useOutsideClick(() => onClose());
 
   const { isOpen, type, data, onClose } = useModal();
   const isModalOpen = isOpen && type === "image";
@@ -49,9 +49,12 @@ export const ImageModal = () => {
   const [[page, direction], setPage] = useState([0, 0]);
   const [index, setIndex] = useState(imageIndex);
 
+  const ref = useOutsideClick(() => onClose(), true);
+
   useEffect(() => {
     setIsMounted(isModalOpen);
     if (isModalOpen) {
+      clearTimeout(timer);
       setDismount(false);
     }
   }, [isModalOpen]);
@@ -61,9 +64,15 @@ export const ImageModal = () => {
   }, [imageIndex]);
 
   if (!isMounted && !isModalOpen) {
-    setTimeout(() => {
-      setDismount(true);
-    }, 300);
+    timer = setTimeout(() => {
+      if (!isModalOpen) {
+        setDismount(true);
+      }
+    }, 1000);
+  } else {
+    if (dismount) {
+      setDismount(false);
+    }
   }
 
   if (dismount || !images) return <></>;
@@ -88,7 +97,7 @@ export const ImageModal = () => {
       initial={{ top: "-100%", opacity: 0 }}
     >
       <ContentWrapper className=" h-auto flex items-center gap-4 mx-auto max-w-[90%] w-full !p-0 !rounded-none">
-        <>
+        <div ref={ref} className="w-full h-full flex items-center">
           <AnimatePresence initial={false} custom={direction} mode="popLayout">
             <motion.img
               key={page}
@@ -137,13 +146,13 @@ export const ImageModal = () => {
               className="text-white group-hover:scale-125 transition-all duration-500"
             />
           </div>
-        </>
+        </div>
 
         <button
           onClick={() => exitModalManual()}
-          className="absolute top-32 right-32 z-30"
+          className="absolute top-32 right-32 z-30 "
         >
-          <XCircleIcon width={35} height={35} />
+          <XCircleIcon className="text-white" width={35} height={35} />
         </button>
       </ContentWrapper>
     </motion.div>

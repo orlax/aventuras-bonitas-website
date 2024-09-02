@@ -10,11 +10,13 @@ import {
 } from "@heroicons/react/24/solid";
 import { useOutsideClick } from "@/hooks/useClickOutside";
 
+let timer: NodeJS.Timeout;
+
 export const VideoModal = () => {
   const [isMounted, setIsMounted] = useState(false);
   const [dismount, setDismount] = useState(true);
 
-  const ref = useOutsideClick(() => onClose());
+  const ref = useOutsideClick(() => onClose(), true);
 
   const { isOpen, type, data, onClose } = useModal();
   const isModalOpen = isOpen && type === "video-modal";
@@ -23,14 +25,21 @@ export const VideoModal = () => {
   useEffect(() => {
     setIsMounted(isModalOpen);
     if (isModalOpen) {
+      clearTimeout(timer);
       setDismount(false);
     }
   }, [isModalOpen]);
 
   if (!isMounted && !isModalOpen) {
-    setTimeout(() => {
-      setDismount(true);
-    }, 300);
+    timer = setTimeout(() => {
+      if (!isModalOpen) {
+        setDismount(true);
+      }
+    }, 1000);
+  } else {
+    if (dismount) {
+      setDismount(false);
+    }
   }
 
   if (dismount || !video) return <></>;
@@ -51,6 +60,7 @@ export const VideoModal = () => {
           autoPlay
           controls
           id="gameplay_video"
+          ref={ref}
         >
           <source src={video} type="video/mp4" />
         </video>

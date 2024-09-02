@@ -54,6 +54,7 @@ export default async function Home({ params: { lang } }: HomeProps) {
       <ContentWrapper>
         <PromoPanel
           lang={lang}
+          contactDict={dictionary.subscribe}
           title={featuredGame?.promotional[lang]?.title}
           description={featuredGame?.promotional[lang]?.description}
           promoVideoURL={promoVideo}

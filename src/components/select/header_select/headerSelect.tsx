@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { usePathname, useRouter } from "next/navigation";
+import { useOutsideClick } from "@/hooks/useClickOutside";
 
 const LANGS = {
   es: {
@@ -35,6 +36,7 @@ export const HeaderSelect = ({ lang, className }: HeaderSelectProps) => {
   const pathName = usePathname();
 
   const router = useRouter();
+  const ref = useOutsideClick(() => setDisplaySelect(false));
 
   const changeLanguage = (path: string) => {
     const splitPath = pathName.split("/");
@@ -56,7 +58,7 @@ export const HeaderSelect = ({ lang, className }: HeaderSelectProps) => {
         id="states-button"
         data-dropdown-toggle="dropdown-states"
         className={cn(
-          "flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-500 bg-transparent border-0 rounded-s-lg focus:ring-none focus:outline-none focus:ring-0  dark:text-white dark:border-gray-600 relative",
+          "flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center bg-transparent border-0 rounded-s-lg focus:ring-none focus:outline-none focus:ring-0  !text-white dark:border-gray-600 relative",
           className
         )}
         role="button"
@@ -94,13 +96,14 @@ export const HeaderSelect = ({ lang, className }: HeaderSelectProps) => {
           {displaySelect && (
             <motion.div
               id="dropdown-states"
-              className="z-10 absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 top-[60px] left-0"
+              className="z-10 absolute divide-y divide-gray-100 rounded-lg shadow w-44 bg-gray-700 top-[60px] left-0"
               initial={{ opacity: 0, y: -30 }}
               exit={{ opacity: 0, y: -30 }}
               animate={{ opacity: 1, y: 0 }}
+              ref={ref}
             >
               <ul
-                className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                className="py-2 text-sm text-gray-200"
                 aria-labelledby="states-button"
               >
                 {Object.entries(LANGS).map((langData) => {
@@ -108,7 +111,7 @@ export const HeaderSelect = ({ lang, className }: HeaderSelectProps) => {
                     <li key={`lang_item_menu_${langData[0]}`}>
                       <button
                         type="button"
-                        className="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                        className="inline-flex w-full px-4 py-2 text-sm text-gray-400 hover:bg-gray-600 hover:text-white transition-all"
                         onClick={() => changeLanguage(langData[1].path)}
                       >
                         <div className="inline-flex items-center">

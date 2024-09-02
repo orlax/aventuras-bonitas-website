@@ -6,6 +6,8 @@ import Image from "next/image";
 import { SubscribeForm } from "../form/subscribeForm";
 import { XCircleIcon } from "@heroicons/react/24/solid";
 
+let timer: NodeJS.Timeout;
+
 export const ContactModal = () => {
   const [isMounted, setIsMounted] = useState(false);
   const [dismount, setDismount] = useState(true);
@@ -17,14 +19,21 @@ export const ContactModal = () => {
   useEffect(() => {
     setIsMounted(isModalOpen);
     if (isModalOpen) {
+      clearTimeout(timer);
       setDismount(false);
     }
   }, [isModalOpen]);
 
   if (!isMounted && !isModalOpen) {
-    setTimeout(() => {
-      setDismount(true);
-    }, 300);
+    timer = setTimeout(() => {
+      if (!isModalOpen) {
+        setDismount(true);
+      }
+    }, 1000);
+  } else {
+    if (dismount) {
+      setDismount(false);
+    }
   }
 
   if (dismount || !lang) return <></>;

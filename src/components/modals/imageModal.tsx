@@ -36,6 +36,8 @@ const swipePower = (offset: number, velocity: number) => {
   return Math.abs(offset) * velocity;
 };
 
+let timer: NodeJS.Timeout;
+
 export const ImageModal = () => {
   const [isMounted, setIsMounted] = useState(false);
   const [dismount, setDismount] = useState(true);
@@ -52,6 +54,7 @@ export const ImageModal = () => {
   useEffect(() => {
     setIsMounted(isModalOpen);
     if (isModalOpen) {
+      clearTimeout(timer);
       setDismount(false);
     }
   }, [isModalOpen]);
@@ -61,9 +64,15 @@ export const ImageModal = () => {
   }, [imageIndex]);
 
   if (!isMounted && !isModalOpen) {
-    setTimeout(() => {
-      setDismount(true);
-    }, 300);
+    timer = setTimeout(() => {
+      if (!isModalOpen) {
+        setDismount(true);
+      }
+    }, 1000);
+  } else {
+    if (dismount) {
+      setDismount(false);
+    }
   }
 
   if (dismount || !images) return <></>;

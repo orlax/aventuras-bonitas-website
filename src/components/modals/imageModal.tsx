@@ -49,7 +49,7 @@ export const ImageModal = () => {
   const [[page, direction], setPage] = useState([0, 0]);
   const [index, setIndex] = useState(imageIndex);
 
-  const ref = useOutsideClick(() => onClose());
+  const ref = useOutsideClick(() => onClose(), true);
 
   useEffect(() => {
     setIsMounted(isModalOpen);

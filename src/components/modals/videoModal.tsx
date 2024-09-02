@@ -16,7 +16,7 @@ export const VideoModal = () => {
   const [isMounted, setIsMounted] = useState(false);
   const [dismount, setDismount] = useState(true);
 
-  const ref = useOutsideClick(() => onClose());
+  const ref = useOutsideClick(() => onClose(), true);
 
   const { isOpen, type, data, onClose } = useModal();
   const isModalOpen = isOpen && type === "video-modal";

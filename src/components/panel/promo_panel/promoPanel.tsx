@@ -33,8 +33,6 @@ export const PromoPanel = ({
   }, []);
 
   const toggleVideoPlayer = () => {
-    console.log("open", contactDict);
-
     onOpen("contact-form", { contactDict, lang });
   };
 

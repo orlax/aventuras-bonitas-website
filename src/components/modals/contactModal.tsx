@@ -17,7 +17,7 @@ export const ContactModal = () => {
   const isModalOpen = isOpen && type === "contact-form";
   const { contactDict, lang } = data;
 
-  const ref = useOutsideClick(() => onClose());
+  const ref = useOutsideClick(() => onClose(), true);
 
   useEffect(() => {
     setIsMounted(isModalOpen);
@@ -52,26 +52,25 @@ export const ContactModal = () => {
       initial={{ top: "-100%", opacity: 0 }}
     >
       <ContentWrapper className=" h-auto w-full  flex items-center gap-4 mx-auto max-w-[800px] bg-white !p-6 rounded-md">
-        <section
-          className="flex flex-col items-center text-center gap-4 relative"
-          ref={ref}
-        >
-          <Image
-            className="h-64 w-auto rounded-full"
-            src="/logo/logo512.png"
-            alt="company-logo"
-            width={512}
-            height={512}
-          />
-          <h3 className="text-3xl text-ab-black">{contactDict?.title}</h3>
-        </section>
-        <SubscribeForm dictionary={contactDict} lang={lang} />
-        <button
-          onClick={() => exitModalManual()}
-          className="absolute top-32 right-32"
-        >
-          <XCircleIcon width={35} height={35} />
-        </button>
+        <div className="flex w-full h-full" ref={ref}>
+          <section className="flex flex-col items-center text-center gap-4 relative">
+            <Image
+              className="h-64 w-auto rounded-full"
+              src="/logo/logo512.png"
+              alt="company-logo"
+              width={512}
+              height={512}
+            />
+            <h3 className="text-3xl text-ab-black">{contactDict?.title}</h3>
+          </section>
+          <SubscribeForm dictionary={contactDict} lang={lang} />
+          <button
+            onClick={() => exitModalManual()}
+            className="absolute top-32 right-32"
+          >
+            <XCircleIcon width={35} height={35} />
+          </button>
+        </div>
       </ContentWrapper>
     </motion.div>
   );

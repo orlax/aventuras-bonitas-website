@@ -60,6 +60,7 @@ export const VideoModal = () => {
           autoPlay
           controls
           id="gameplay_video"
+          ref={ref}
         >
           <source src={video} type="video/mp4" />
         </video>

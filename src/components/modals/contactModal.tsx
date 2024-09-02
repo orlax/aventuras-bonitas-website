@@ -5,6 +5,7 @@ import { ContentWrapper } from "../container/page_wrapper/contentWrapper";
 import Image from "next/image";
 import { SubscribeForm } from "../form/subscribeForm";
 import { XCircleIcon } from "@heroicons/react/24/solid";
+import { useOutsideClick } from "@/hooks/useClickOutside";
 
 let timer: NodeJS.Timeout;
 
@@ -15,6 +16,8 @@ export const ContactModal = () => {
   const { isOpen, type, data, onClose } = useModal();
   const isModalOpen = isOpen && type === "contact-form";
   const { contactDict, lang } = data;
+
+  const ref = useOutsideClick(() => onClose());
 
   useEffect(() => {
     setIsMounted(isModalOpen);
@@ -49,7 +52,10 @@ export const ContactModal = () => {
       initial={{ top: "-100%", opacity: 0 }}
     >
       <ContentWrapper className=" h-auto w-full  flex items-center gap-4 mx-auto max-w-[800px] bg-white !p-6 rounded-md">
-        <section className="flex flex-col items-center text-center gap-4 relative">
+        <section
+          className="flex flex-col items-center text-center gap-4 relative"
+          ref={ref}
+        >
           <Image
             className="h-64 w-auto rounded-full"
             src="/logo/logo512.png"

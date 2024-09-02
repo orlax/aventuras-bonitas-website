@@ -3,9 +3,11 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { PrimaryButton } from "@/components/button/primary_button/primaryButton";
 import { useModal } from "@/store/useModal";
+import { Locale } from "@/dictionaries";
 
 type PromoPanelProps = {
-  lang: any;
+  lang: Locale;
+  contactDict: any;
   className?: string;
   title: string;
   description: string;
@@ -18,6 +20,7 @@ export const PromoPanel = ({
   className = "",
   title,
   description,
+  contactDict,
   promoVideoURL = "/featured_game/gameplay_video.mp4",
   buttonLabel,
 }: PromoPanelProps) => {
@@ -30,7 +33,9 @@ export const PromoPanel = ({
   }, []);
 
   const toggleVideoPlayer = () => {
-    onOpen("video-modal", { video: promoVideoURL });
+    console.log("open", contactDict);
+
+    onOpen("contact-form", { contactDict, lang });
   };
 
   const promotionalImage = `/featured_game/home_promo.${lang}.png`;

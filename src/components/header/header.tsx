@@ -148,7 +148,7 @@ export const Header = ({
     >
       <div className="flex flex-1 relative w-full justify-between py-3 2xl:px-[20%] lg:px-40 md:px-20 xs:px-5 z-20">
         <div className="h-14 w-28 relative">
-          <Link href={`/${lang}`}>
+          <Link href={`/${lang}`} className="cursor-pointer">
             <Image
               src={`/logo/with_name_logo.${lang}.png`}
               alt="Nice Adventures Logo"
@@ -177,7 +177,7 @@ export const Header = ({
           <ul className="flex flex-row gap-2 w-full items-center">
             {menuItems.map((item, index) => (
               <li
-                className="flex flex-1"
+                className="flex flex-1 text-white"
                 key={`header_menu_item_full_${index}`}
               >
                 <HeaderMenuButtonLink
@@ -187,7 +187,10 @@ export const Header = ({
               </li>
             ))}
 
-            <li className="flex flex-1" key={`header_menu_item_full_lang`}>
+            <li
+              className="flex flex-1 text-white"
+              key={`header_menu_item_full_lang`}
+            >
               <HeaderMenuButtonLink
                 element={<HeaderSelect lang={lang} />}
                 onClick={() => {}}

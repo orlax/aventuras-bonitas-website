@@ -2,13 +2,14 @@ import { SpringCarouselImage } from "@/components/images/spring_carousel/springC
 import { Locale } from "@/dictionaries";
 import { create } from "zustand";
 
-export type ModalType = "contact-form" | "image";
+export type ModalType = "contact-form" | "image" | "video-modal";
 
 interface ModalData {
   contactDict?: any;
   lang?: Locale;
   imageIndex?: number;
   images?: SpringCarouselImage[];
+  video?: string;
   onCloseAction?: () => void;
 }
 

@@ -3,6 +3,10 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion, PanInfo } from "framer-motion";
 import { useModal } from "@/store/useModal";
+import {
+  ArrowLeftCircleIcon,
+  ArrowRightCircleIcon,
+} from "@heroicons/react/24/solid";
 
 interface CarouselGalleryProps {
   images: { url: string; name: string }[];
@@ -141,7 +145,7 @@ export const CarousellGalery: React.FC<CarouselGalleryProps> = ({ images }) => {
             opacity: { duration: 0.5 },
           }}
           alt={images[leftIndex].name}
-          className="w-[24%] object-cover h-[auto] hover:scale-[1.02] cursor-pointer"
+          className="w-[24%] object-cover h-[auto] hover:scale-[1.02] cursor-pointer xs:hidden lg:block"
           style={{
             height: calculateHeight(dragOffset, "left"),
             width: calculateWidth(dragOffset, "left"),
@@ -150,7 +154,7 @@ export const CarousellGalery: React.FC<CarouselGalleryProps> = ({ images }) => {
         />
         <motion.img
           key={`root-page-${page}`}
-          className="w-[49%] h-[auto] cursor-grab active:cursor-grabbing object-contain"
+          className="h-[auto] cursor-grab active:cursor-grabbing object-contain xs:w-[100%] lg:w-[49%]"
           src={images[imageIndex].url}
           alt={images[imageIndex].name}
           custom={direction}
@@ -199,10 +203,33 @@ export const CarousellGalery: React.FC<CarouselGalleryProps> = ({ images }) => {
             height: calculateHeight(dragOffset, "right"),
             width: calculateWidth(dragOffset, "right"),
           }}
-          className="w-[24%] object-cover h-[auto] hover:scale-[1.02] cursor-pointer"
+          className="w-[24%] object-cover h-[auto] hover:scale-[1.02] cursor-pointer xs:hidden lg:block"
           onClick={() => paginate(1)}
         />
       </AnimatePresence>
+
+      <>
+        <div
+          className="absolute bgroup rounded-lg w-10 h-10 flex justify-center items-center select-none cursor-pointer font-bold z-20 next xs:right-10 md:right-20"
+          onClick={() => paginate(1)}
+        >
+          <ArrowRightCircleIcon
+            width={40}
+            height={40}
+            className="text-white group-hover:scale-125 transition-all duration-500 lg:hidden"
+          />
+        </div>
+        <div
+          className="absolute group rounded-lg w-10 h-10 flex justify-center items-center select-none cursor-pointer font-bold z-20 prev xs:left-10 md:left-20"
+          onClick={() => paginate(-1)}
+        >
+          <ArrowLeftCircleIcon
+            width={40}
+            height={40}
+            className="text-white group-hover:scale-125 transition-all duration-500 lg:hidden"
+          />
+        </div>
+      </>
     </div>
   );
 };

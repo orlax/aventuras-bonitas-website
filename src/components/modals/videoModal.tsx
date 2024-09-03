@@ -69,7 +69,7 @@ export const VideoModal = () => {
           onClick={() => exitModalManual()}
           className="absolute top-32 right-32 z-30"
         >
-          <XCircleIcon width={35} height={35} />
+          <XCircleIcon className="text-white" width={35} height={35} />
         </button>
       </ContentWrapper>
     </motion.div>

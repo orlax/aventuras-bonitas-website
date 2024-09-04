@@ -15,6 +15,9 @@ export const ServicesPanel = ({
   return (
     <SimplePanel className="md:block text-ab-black bg-gradient-to-br from-white to-ab-lilac">
       <BglessPanel
+        final=""
+        dictionary={dictionary}
+        bullets={[]}
         title={dictionary?.title}
         description={dictionary?.description}
         pageAnchor={{

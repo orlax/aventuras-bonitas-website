@@ -16,18 +16,18 @@ export const PlatformPanel = ({
   }[];
 }) => {
   return (
-    <SimplePanel className="text-ab-black bg-gradient-to-br from-white to-ab-orange h-full !flex !flex-row !gap-2">
-      <div className="flex flex-col gap-3 flex-1">
+    <SimplePanel className="text-ab-black bg-gradient-to-br from-white to-ab-orange h-full !flex !flex-col justify-start">
+      <div className="flex flex-col">
         <h4 className="text-sm">{`${dictionary?.release_date} ${release_date}`}</h4>
         <h2 className="text-2xl font-semibold text-pretty">
           {dictionary?.title}
         </h2>
       </div>
-      <div className="flex gap-1 flex-wrap items-center w-[30%]">
+      <div className="flex gap-1 flex-wrap items-center w-full">
         {platforms?.map((platform, index) => (
           <PlatformCard
             key={`platform_${index}`}
-            className="flex-[1_1_45%]"
+            className="w-full"
             text={platform.name}
             Icon={
               <img

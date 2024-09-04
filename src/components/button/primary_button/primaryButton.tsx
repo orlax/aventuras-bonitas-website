@@ -17,7 +17,8 @@ export const PrimaryButton = ({
 }: PrimaryButtonProps) => {
     return (
         <button
-            className={`flex bg-ab-black hover:opacity-50 rounded-full p-3 ${className}`}
+            style={{ backgroundColor: '#FFD700' }}
+            className={`flex hover:opacity-50 rounded-full p-3 text-red-900 font-bold whitespace-nowrap  mx-auto md:mx-0 ${className}`}
             disabled={disabled}
             onClick={onClick}
         >

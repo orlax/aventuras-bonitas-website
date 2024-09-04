@@ -9,6 +9,8 @@ type ABGame = {
   promotional: { [key: string]: { title: string; description: string } };
   release_date: string;
   slug: string;
+  final: {[key: string]: string};
+  bullets: { [key: string]: string[] };
 };
 
 export const getFeaturedGame = async (lang: Locale) => {
@@ -19,6 +21,8 @@ export const getFeaturedGame = async (lang: Locale) => {
   let featuredGame: ABGame = {
     description: { [lang]: "" },
     featured: false,
+    bullets:{ [lang]: [] },
+    final:{ [lang]: "" },
     name: { [lang]: "" },
     platforms: [],
     promotional: { [lang]: { title: "", description: "" } },
@@ -36,7 +40,7 @@ export const getFeaturedGame = async (lang: Locale) => {
   }); 
   */
 
-  games.forEach((game: ABGame) => {
+  games.forEach((game: any) => {
     if (game?.featured) {
       featuredGame = game;
     }

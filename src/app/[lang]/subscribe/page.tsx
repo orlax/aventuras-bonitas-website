@@ -13,22 +13,27 @@ export default async function Subscribe({
   return (
     <main className="block bg-ab-black">
       <ContentWrapper
-        className="min-h-screen w-full bg-gradient-to-l from-ab-light-blue from-70% to-white
-                flex items-center gap-4 py-10 md:flex-row sm:flex-col xs:flex-col"
+        style={{
+          backgroundImage: "url(/storage/gameplay_05.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+        className="min-h-screen w-full flex items-center flex-col p-24"
       >
-        <section className="flex flex-col items-center text-center gap-4">
+        <section className="flex flex-col items-center text-left max-w-[524px] mx-auto bg-black/80 rounded-xl text-white mt-24" >
           <Image
-            className="h-64 w-auto rounded-full"
+            className="h-64 w-auto rounded-full mt-[-24px]"
             src="/logo/logo512.png"
             alt="company-logo"
             width={512}
             height={512}
           />
-          <h3 className="text-3xl text-ab-black">
+          <h3 className="text-3xl text-center text-white max-w-[324px] mx-[24px]">
             {dictionary.subscribe.title}
           </h3>
+          <SubscribeForm dictionary={dictionary.subscribe} lang={lang} />
         </section>
-        <SubscribeForm dictionary={dictionary.subscribe} lang={lang} />
+        
       </ContentWrapper>
     </main>
   );

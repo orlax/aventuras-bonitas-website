@@ -62,35 +62,35 @@
 
   "about": {
     "page_anchor": "About us",
-    "title": "“We communicate clearly and craft software solutions that deliver results.”",
-    "description": "Nice Adventures is an independent video game studio from Barranquilla, Colombia. Founded in 2022 to create adventure games.",
+    "title": "“We are a Game Studio Making Adventure Games”",
+    "description": "Nice Adventures is an independent video game studio from Barranquilla, Colombia. Founded in 2022 to create adventure games. We are currently working on our first action-adventure game, “Adventure in Henders Castle“. We also offer some custom development services for clients to support our Game Making Endeavors.",
     "button": "Explore Jobs"
   },
 
   "services": {
     "page_anchor": "Our Services",
     "title": "Software Development",
-    "description": "With a decade of expertise, our software developers have crafted web and mobile solutions enjoyed by hundreds of thousands. Specializing in payment platforms, crypto exchanges, diverse mobile apps and cutting-edge AI tools like ChatGPT, we're eager to discuss your needs.",
+    "description": "With over a decade of experience, we've built software platforms that have reached hundreds of thousands of users. Our expertise spans payment systems, crypto exchanges, mobile apps, and cloud platforms. More recently, we’ve been integrating advanced AI, like ChatGPT, into customer service and content solutions. We're passionate about helping people turn their ideas into reality and building to succeed.",
     "solutions": [
       {
         "id": "mobile",
         "title": "Mobile Application Development",
-        "description": "Mobile application development."
+        "description": "with React Native and Native development"
       },
       {
         "id": "games",
         "title": "Videogame Development",
-        "description": "Videogame development."
+        "description": "Unity, Unreal Engine and HTML/Javascript"
       },
       {
         "id": "ai",
-        "title": "ChatGPT Integrations",
-        "description": "ChatGPT integrations."
+        "title": "IA Integrations",
+        "description": "ChatGPT, Llama and other providers."
       },
       {
         "id": "web",
         "title": "Web Application Development",
-        "description": "Web application development."
+        "description": "With Python, Django, React and Node.js."
       }
     ]
   },
@@ -100,5 +100,7 @@
     "jobs": "Work with us",
     "subscribe": "Subscribe",
     "company": "© Nice Adventures"
-  }
+  }, 
+
+  "cta_download":"Download the Demo"
 }

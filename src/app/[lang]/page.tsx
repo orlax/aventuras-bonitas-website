@@ -28,7 +28,7 @@ export default async function Home({ params: { lang } }: HomeProps) {
 
   const firePromoVideo = fireStorageRef(
     fireAppStorage,
-    "/assets/featured_game/gameplay_video.mp4"
+    "/assets/featured_game/castle.mp4"
   );
   const promoVideo = await getDownloadURL(firePromoVideo);
 
@@ -54,6 +54,7 @@ export default async function Home({ params: { lang } }: HomeProps) {
       <ContentWrapper>
         <PromoPanel
           lang={lang}
+          dictionary={dictionary}
           contactDict={dictionary.subscribe}
           title={featuredGame?.promotional[lang]?.title}
           description={featuredGame?.promotional[lang]?.description}

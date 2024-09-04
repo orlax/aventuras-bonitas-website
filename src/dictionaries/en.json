@@ -100,5 +100,7 @@
     "jobs": "Work with us",
     "subscribe": "Subscribe",
     "company": "© Nice Adventures"
-  }
+  }, 
+
+  "cta_download":"Download the Demo"
 }

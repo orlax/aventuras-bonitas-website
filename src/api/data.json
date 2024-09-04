@@ -182,16 +182,16 @@
       ],
       "promotional": {
         "en": {
-          "description": "Show your bravery by facing dangers that await a secret hidden for decades.",
-          "title": "Use magical powers to explore a grand castle."
+          "description": "Overcome  obstacles, solve puzzles and fight dark forces In this Action Adventure Game",
+          "title": "Cast Magic Spells and Explore"
         },
         "es": {
-          "description": "Demuestra tu valentía al enfrentar peligros que aguardan un secreto oculto por décadas.",
-          "title": "Explora el gran castillo usando poderes mágicos."
+          "description": "Supera obstáculos, resuelve acertijos y lucha contra fuerzas oscuras en este juego de acción y aventura.",
+          "title": "Lanza Hechizos y Explora."
         },
         "jp": {
-          "description": "数十年にわたって秘密にされていた危険に立ち向かい、あなたの勇気を示してください。",
-          "title": "魔法の力を使って壮大な城を探索。"
+          "description": "障害を乗り越え、パズルを解き、暗黒の力と戦うこのアクションアドベンチャーゲーム。",
+          "title": "魔法の呪文を唱えて探検"
         }
       },
       "release_date": "Q4 2024",

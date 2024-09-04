@@ -47,7 +47,7 @@
   },
 
   "promo_panel": {
-    "button_label": "Subscribirse para ver novedades"
+    "button_label": "Subscribirse a las novedades"
   },
 
   "featured_game": {
@@ -100,5 +100,7 @@
     "jobs": "Trabaja con nosotros",
     "subscribe": "Suscribirse",
     "company": "© Aventuras Bonitas"
-  }
+  }, 
+
+  "cta_download":"Descargar el Demo"
 }

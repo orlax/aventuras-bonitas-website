@@ -63,34 +63,34 @@
   "about": {
     "page_anchor": "Sobre nosotros",
     "title": "“Somos un estudio de Videojuegos haciendo juegos de aventuras.”",
-    "description": "Aventuras Bonitas es un estudio de Videojuegos Independiente de Barranquilla, Colombia. Fundado en 2022 para crear juegos de aventuras.",
+    "description": "Aventuras Bonitas es un estudio de Videojuegos Independiente de Barranquilla, Colombia. Fundado en 2022 para crear juegos de aventuras. Estamos trabajando en nuestro primer juego de accion y aventura llamado “Aventura en el Castillo de Hender“. Tambien ofrecemos servicios de Desarrollo a clientes para apoyar nuestro desarrollo de juegos.",
     "button": "Ofertas de empleo"
   },
 
   "services": {
     "page_anchor": "Servicios",
     "title": "Desarrollo de Software",
-    "description": "Con una década de experiencia, hemos desarrollado soluciones web y móviles utilizadas por cientos de miles. Nos especializamos en pasarelas de pago, diversas apps móviles y herramientas de IA como ChatGPT. Te anímate a contarnos acerca de tu proximo proyecto.",
+    "description": "Con más de una década de experiencia, hemos creado plataformas de software que han llegado a cientos de miles de usuarios. Nuestra experiencia abarca sistemas de pago, intercambios de criptomonedas, aplicaciones móviles y plataformas en la nube. Más recientemente, hemos estado integrando IA avanzada, como ChatGPT, en soluciones de atención al cliente y producción de contenido. Nos apasiona ayudar a las personas a convertir sus ideas en realidad y construir para el éxito.",
     "solutions": [
       {
         "id": "mobile",
         "title": "Desarrollo de Aplicaciones Móviles",
-        "description": "Desarrollo de aplicaciones móviles."
+        "description": "Con React Native y Desarrollo Nativo con Kotlin y Swift."
       },
       {
         "id": "games",
         "title": "Desarrollo de Videojuegos",
-        "description": "Desarrollo de videojuegos."
+        "description": "Unity, Unreal Engine y HTML/Javascript."
       },
       {
         "id": "ai",
-        "title": "Integraciones con ChatGPT",
-        "description": "Integraciones con la IA de ChatGPT."
+        "title": "Integraciones con IA",
+        "description": "ChatGPT, Llama y otros proveedores."
       },
       {
         "id": "web",
         "title": "Aplicaiones Web",
-        "description": "Desarrollo de aplicaiones Web."
+        "description": "Con Python, Django, React y Node.js."
       }
     ]
   },

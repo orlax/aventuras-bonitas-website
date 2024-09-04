@@ -24,13 +24,13 @@ export const ServiceButton = ({
             onClick={onClick}
         >
             <div className="flex w-full gap-2 items-center justify-between">
-                <h3 className="text-start text-[.7rem] font-semibold">{title}</h3>
+                <h3 className="text-start text-xl leading-5 font-semibold">{title}</h3>
                 {Logo &&
                 <span className="p-2">
                     {Logo}
                 </span>}
             </div>
-            <p className="text-start text-[.5rem]">{description}</p>
+            <p className="text-start text-sm">{description}</p>
         </button>
     )
 }

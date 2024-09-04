@@ -31,7 +31,7 @@ export const ServicesPanel = ({
                 description={solution?.description}
                 Logo={
                   <img
-                    className="w-7 h-auto"
+                    className="h-auto w-[50px]"
                     src={`/services/${solution.id}.png`}
                     alt={solution.id}
                   />

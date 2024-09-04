@@ -68,7 +68,10 @@ export default async function Home({ params: { lang } }: HomeProps) {
         <ContentWrapper className="flex flex-col gap-4 !py-12">
           <BglessPanel
             title={featuredGame.name[lang]}
+            dictionary={dictionary}
             description={featuredGame.description[lang]}
+            bullets={featuredGame.bullets[lang]}
+            final={featuredGame.final[lang]}
             pageAnchor={{
               id: NAVIGATION.FEATURED_GAME,
               text: dictionary?.featured_game?.page_anchor,
@@ -102,6 +105,9 @@ export default async function Home({ params: { lang } }: HomeProps) {
         {/* About Us */}
         <ContentWrapper className="flex flex-col bg-gradient-to-t from-white/90 from-5% via-ab-light-blue via-90% gap-8">
           <BglessPanel
+            dictionary={dictionary}
+            bullets={[]}
+            final={""}
             leftContent={
               <div className="xl:h-[500px] md:h-72 xs:h-56 mx-auto w-full overflow-hidden flex justify-center items-center">
                 <Image

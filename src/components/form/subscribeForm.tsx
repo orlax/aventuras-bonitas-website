@@ -100,7 +100,7 @@ export const SubscribeForm = ({
     <>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col gap-4 rounded-lg bg-white px-4 py-10 text-ab-black
+        className="flex flex-col gap-4 rounded-lg bg-transparent px-4 py-10 text-white
                 items-start md:w-full sm:w-full xs:w-full"
         action=""
         method="post"

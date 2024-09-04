@@ -151,14 +151,50 @@
       "id": 4,
       "url": "/storage/gameplay_04.jpg",
       "name": "gameplay 04"
+    },
+    {
+      "id": 5,
+      "url": "/storage/gameplay_05.jpg",
+      "name": "gameplay 05"
+    },
+    {
+      "id": 6,
+      "url": "/storage/gameplay_06.jpg",
+      "name": "gameplay 06"
     }
   ],
   "games": [
     {
       "description": {
-        "en": "Use magical powers to explore a large castle full of mysteries and traps while searching for the most powerful spell in the world.",
+        "en": "Our first 3d action-adventure game. Cast Magic spells, Overcome  obstacles, solve puzzles and fight the dark forces that have taken hold of your ancestral home.",
         "es": "Usa poderes mágicos para explorar un gran castillo lleno de misterios y trampas mientras buscas el Hechizo mas poderoso del mundo.",
         "jp": "魔法の力を使って、謎とトラップに満ちた大きな城を探索し、世界で最も強力な呪文を探し求めましょう。"
+      },
+      "bullets":
+      {
+        "en": [
+          "Explore and old castle filled with puzzles, Obstacles and enemies.",
+          "Find  magic runes  and create new spells with the help of your grandma.",
+          "Interact with Ghosts and Quirky characters to help you in your adventure.",
+          "Play through the history of recovering your family's Honor."
+        ],
+        "es": [
+          "Explora un antiguo castillo lleno de acertijos, obstáculos y enemigos.",
+          "Encuentra runas mágicas y crea nuevos hechizos con la ayuda de tu abuela.",
+          "Interactúa con fantasmas y personajes peculiares que te ayudarán en tu aventura.",
+          "Juega a través de la historia de recuperar el honor de tu familia."
+        ],
+        "jp":[
+          "パズル、障害、敵に満ちた古い城を探索します。",
+          "祖母の助けを借りて、魔法のルーンを見つけ、新しい呪文を作成します。",
+          "あなたの冒険を助ける幽霊や風変わりなキャラクターと交流します。",
+          "家族の名誉を取り戻す歴史をプレイします。"
+        ]
+      },
+      "final": {
+        "en": "The Game is in development and will launch sometime in 2025, you can play an early demo of the game now, we would love to get your feedback.",
+        "es": "El juego está en desarrollo y se lanzará en algún momento de 2025, puedes jugar un demo del juego ahora, nos encantaría recibir tus comentarios.",
+        "jp": "ゲームは開発中で、2025年のどこかでローンチされます。今すぐゲームのデモをプレイできます。あなたのフィードバックをお待ちしています。"
       },
       "featured": true,
       "name": {
@@ -194,7 +230,7 @@
           "title": "魔法の呪文を唱えて探検"
         }
       },
-      "release_date": "Q4 2024",
+      "release_date": "TBD 2025",
       "slug": "ai-henders-castle"
     }
   ]

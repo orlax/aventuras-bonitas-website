@@ -85,9 +85,9 @@ export const BglessPanel = ({
               <PageAnchorText {...pageAnchor} />
               <h2 className="text-3xl font-bold max-w-[270px]">{title}</h2>
               <p className="text-md">{description}</p>
-              <ul className="list-disc max-w-[256px]">
+              <ul className="list-none max-w-[256px]">
                 {bullets.map((bullet, index) => (
-                  <li key={index} className="text-sm mb-4">
+                  <li key={index} className="text-sm mb-4 before:content-['🎮_']">
                     {bullet}
                   </li>
                 ))}

@@ -4,7 +4,7 @@
     "description": "Aventuras Bonitas es un estudio de videojuegos independiente fundado en 2022 y ubicado en la ciudad de Barranquilla, Colombia."
   },
   "subscribe": {
-    "title": "¿Te gusta el Juego? Suscribete para recibir noticias nuestras.",
+    "title": "¿Te gusta el Juego? Suscríbete para recibir noticias nuestras.",
     "form_name": "Nombre",
     "form_placeholder_name": "John Doe",
     "form_invalid_name": "El Nombre no válido.",
@@ -42,7 +42,7 @@
     "game": "Game",
     "services": "Servicios",
     "about": "Acerca de",
-    "contact": "Suscribete",
+    "contact": "Suscríbete",
     "blog": "Blog"
   },
 

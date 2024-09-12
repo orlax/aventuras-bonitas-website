@@ -92,7 +92,42 @@
         "title": "Web Application Development",
         "description": "With Python, Django, React and Node.js."
       }
-    ]
+    ],
+
+    "offer_tag": {
+      "tittle": "Limited time offer ",
+      "remaining_time_plural": "%time_left% days left",
+      "remaining_time_singular": "%time_left% day left"
+    },
+
+    "page_title": "Get answers about",
+    "page_title_2": "how to build your software product.",
+    "page_subtitle": "11 years of crafting world-class software.",
+    "page_caption": "Your vision, Our Expertise.",
+    "page_title_cta_book_call": "Book a Free Discovery Call",
+    "page_game_service_title": "Got a Game-Changing Idea?",
+    "page_game_service_title_2": "Let's Bring It to Life!",
+    "page_game_service_description": "Hey there! We're Nice Adventures, a passionate game dev studio with a twist. Sometimes, we lend our skills to help people like you build amazing software. Here's the deal:",
+    "page_why_us_title": "Why choose us?",
+    "page_why_us_reasons": [
+      "We're game devs at ❤️, bringing creativity and passion to every project",
+      "11 years of experience crafting world-class software",
+      "Your project gets real attention - we're not juggling dozens of clients",
+      "We want to be true partners 🔥, not just another agency"
+    ],
+    "page_stack_title": "What we do",
+    "page_stack_list": [
+      "Mobile apps (React Native)",
+      "Web platforms (Python/Django, Node.js, Java)",
+      "Web apps (React, Angular)",
+      "Video games (2D, 3D, AR/VR, Unity, Multiplayer)",
+      "AI integration ( ChatGPT, Other LLMs, autonomous agents)"
+    ],
+    "page_trusted_by_title": "Our Track Record",
+    "page_trusted_by_description": "We've developed mobile applications and web platforms used by hundreds of thousands of users, and recently, we've gained extensive experience in integrating AI and LLMs into existing business solutions. Here are a few companies we've had help along the way.",
+    "page_comments_title": "Here's the Twist",
+    "page_comments_description": "We don't always take on new clients, but if you're seeing this page, it means we have an opening on our exclusive list. Now's your chance to let us bring our expertise to your project!",
+    "page_comments_book_call_cta": "Book a Free Discovery Call"
   },
 
   "footer": {

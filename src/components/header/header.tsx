@@ -54,7 +54,7 @@ export const Header = ({
         if (typeof main !== "boolean" && main !== true) {
           toggleMenu();
         }
-        router.replace(`/${lang}/#${NAVIGATION.SERVICES}`);
+        router.replace(`/${lang}/${NAVIGATION.SERVICES}`);
       },
     },
     {
@@ -83,7 +83,6 @@ export const Header = ({
         }
 
         onOpen("contact-form", { contactDict, lang });
-        //router.push(`/${lang}/subscribe`);
       },
     },
   ];

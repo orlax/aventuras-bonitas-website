@@ -92,7 +92,42 @@
         "title": "Aplicaiones Web",
         "description": "Con Python, Django, React y Node.js."
       }
-    ]
+    ],
+
+    "offer_tag": {
+        "tittle": "Oferta por tiempo limitado ",
+        "remaining_time_plural": "Quedan %time_left% días",
+        "remaining_time_singular": "Queda %time_left% día"
+    },
+
+    "page_title": "Obtén respuestas sobre",
+    "page_title_2": "cómo construir tu producto de software.",
+    "page_subtitle": "11 años creando software de clase mundial.",
+    "page_caption": "Tu visión, nuestra experiencia.",
+    "page_title_cta_book_call": "Reserva una llamada gratis",
+    "page_game_service_title": "¿Tienes una idea innovadora?",
+    "page_game_service_title_2": "¡Hagámosla realidad!",
+    "page_game_service_description": "¡Hola! Somos Nice Adventures, un apasionado estudio de desarrollo de juegos con un toque especial. A veces, prestamos nuestras habilidades para ayudar a personas como tú a construir software increíble. Aquí está la propuesta:",
+    "page_why_us_title": "¿Por qué elegirnos?",
+    "page_why_us_reasons": [
+        "Somos desarrolladores de juegos de corazón ❤️, aportando creatividad y pasión a cada proyecto.",
+        "11 años de experiencia creando software de clase mundial.",
+        "Tu proyecto recibe atención real; no estamos manejando docenas de clientes a la vez.",
+        "Queremos ser verdaderos socios 🔥, no solo otra agencia más."
+    ],
+    "page_stack_title": "Lo que hacemos",
+    "page_stack_list": [
+        "Aplicaciones móviles (React Native)",
+        "Plataformas web (Python/Django, Node.js, Java)",
+        "Aplicaciones web (React, Angular)",
+        "Videojuegos (2D, 3D, AR/VR, Unity, Multijugador)",
+        "Integración de IA (ChatGPT, otros LLMs, agentes autónomos)"
+    ],
+    "page_trusted_by_title": "Nuestro historial",
+    "page_trusted_by_description": "Hemos desarrollado aplicaciones móviles y plataformas web utilizadas por cientos de miles de usuarios, y recientemente hemos adquirido una amplia experiencia en la integración de IA y LLMs en soluciones empresariales existentes. Aquí algunas de las compañías a las que hemos ayudado en el camino.",
+    "page_comments_title": "Aquí está el giro",
+    "page_comments_description": "No siempre aceptamos nuevos clientes, pero si estás viendo esta página, significa que tenemos un espacio en nuestra lista exclusiva. ¡Ahora es tu oportunidad de permitirnos aportar nuestra experiencia a tu proyecto!",
+    "page_comments_book_call_cta": "Reserva una llamada gratis"
   },
 
   "footer": {

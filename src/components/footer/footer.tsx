@@ -41,7 +41,7 @@ export const Footer = ({
           height={200}
         />
       </div>
-      <ul className="flex gap-3 items-center md:flex-row xs:flex-col">
+      <ul className="flex gap-3 items-center md:flex-row xs:flex-col z-0">
         {footerUrls.map((element, index) => {
           if (element.url.includes("/subscribe")) {
             return (
@@ -66,7 +66,7 @@ export const Footer = ({
           }
         })}
       </ul>
-      <ul className="flex md:gap-3 xs:gap-5 items-center">
+      <ul className="flex md:gap-3 xs:gap-5 items-center z-0">
         {socialNetworks.map((network) => (
           <li key={`footer_${network.id}`} className="flex">
             <a
@@ -84,7 +84,7 @@ export const Footer = ({
           </li>
         ))}
       </ul>
-      <span className="text-xs">{`${dictionary?.company} ${currentYear}`}</span>
+      <span className="text-xs z-0">{`${dictionary?.company} ${currentYear}`}</span>
     </footer>
   );
 };

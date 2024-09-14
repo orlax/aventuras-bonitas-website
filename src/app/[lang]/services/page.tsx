@@ -1,20 +1,42 @@
 import { ContentWrapper } from "@/components/container/page_wrapper/contentWrapper";
 import { BookCallButton, BookCallPanel } from "@/components/panel/services_panel/bookCallPanel";
 import { getDictionary } from "@/dictionaries";
-import { fireAppStorage, fireStorageRef } from "@/services/firebase";
+import { getDifferenceInDays } from "@/lib/utils";
+import { fireChild, fireDBRef, fireGet } from "@/services/firebase";
 import { PageProps } from "@/types/pageProps";
-import { getDownloadURL } from "firebase/storage";
+import { unstable_cache } from "next/cache";
+
+// Next.js will invalidate the cache when a
+// request comes in, at most once every 60 seconds.
+export const revalidate = 60;
 
 export default async function Services({ params: { lang } }: PageProps) {
     
     const dictionary = await getDictionary(lang);
 
-    const firePromoVideo = fireStorageRef(
-        fireAppStorage,
-        "/assets/featured_game/castle.mp4"
-    );
-    const promoVideo = await getDownloadURL(firePromoVideo);
+    // ============================================================================
+    // GET REMAINIG DAYS FROM FIREBASE
+    // ============================================================================
+    const getProjectOfferEndDate = async () => {
+        const response = await fireGet(fireChild(fireDBRef, "offers/projects"));
+        if(!response.exists()) {
+            return "";
+        }
 
+        return response.val();
+    }
+    const getProjectOfferEndDateCachingData = unstable_cache(
+        getProjectOfferEndDate,
+        ["offers/projects"],
+        {
+            tags: ["offers/projects"],
+            revalidate: 60 * 60 * 24, // cache the response for a day
+        }
+    );
+    const offer = await getProjectOfferEndDateCachingData();
+    const remainingDays = getDifferenceInDays(new Date(), new Date(offer));
+    // ============================================================================
+    
     return (
         <main className="block pt-[100px]">
             <video
@@ -24,16 +46,16 @@ export default async function Services({ params: { lang } }: PageProps) {
                 loop
                 id="gameplay_video"
             >
-                <source src={promoVideo} type="video/mp4" />
+                <source src="/featured_game/castle.mp4" type="video/mp4" />
             </video>
             <div className="absolute h-screen w-screen backdrop-blur-sm bg-gradient-to-b from-white/10 top-0" />
 
             {/* Book a Call section */}
             <ContentWrapper>
-                <BookCallPanel dictionary={dictionary} />
+                <BookCallPanel dictionary={dictionary} remainingDays={remainingDays} />
             </ContentWrapper>
 
-            <ContentWrapper className="relative bg-white gap-6">
+            <ContentWrapper className="relative bg-white gap-6 px-12">
                 {/* Game development */}
                 <section className="flex flex-col items-center justify-center text-center text-black gap-2">
                     <div className="flex flex-col pt-5 font-semibold">
@@ -107,7 +129,7 @@ export default async function Services({ params: { lang } }: PageProps) {
 
                     <p>{dictionary.services.page_comments_description}</p>
 
-                    <BookCallButton dictionary={dictionary} className="self-center bg-ab-lilac text-white mt-3 flex px-8 py-1" />
+                    <BookCallButton dictionary={dictionary} className="self-center text-white mt-3 flex px-8 py-1" backgroundClass="bg-ab-lilac" />
                 </section>
             </ContentWrapper>
 

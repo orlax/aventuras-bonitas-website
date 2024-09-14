@@ -4,13 +4,10 @@ import { PrimaryButton } from "@/components/button/primary_button/primaryButton"
 import { interpolateText } from "@/lib/utils";
 import { useCallback, useState } from "react";
 
-export const BookCallPanel = ({ dictionary }: { dictionary: any }) => {
+export const BookCallPanel = ({ dictionary, remainingDays }: { dictionary: any, remainingDays: number }) => {
     // TODO: integrate Calendly https://developer.calendly.com/getting-started
-    // TODO: migrate firebase video to server public folder 
 
-    const [remainingDays, setRemainingDays] = useState(4);
-
-    const getRemainingDays = useCallback(() => {
+    const getRemainingDaysText = useCallback(() => {
         const text = remainingDays > 1 ?
             dictionary.services.offer_tag.remaining_time_plural
             :
@@ -27,11 +24,11 @@ export const BookCallPanel = ({ dictionary }: { dictionary: any }) => {
             <section className="relative flex flex-col items-center w-full justify-center text-center relative gap-1">
                 
                 {/* Offer banner */}
-                <div className="flex items-center font-bold uppercase py-0.5 px-5 gap-1 bg-ab-yellow rounded-md
-                -mt-11">
+                {remainingDays > 0 &&
+                <div className="animate-bounce flex items-center font-bold uppercase py-0.5 px-5 gap-1 bg-ab-yellow rounded-md -mt-10">
                     <h3 className="text-black">{dictionary.services.offer_tag.tittle}</h3>
-                    <h3>{getRemainingDays()}</h3>
-                </div>
+                    <h3>{getRemainingDaysText()}</h3>
+                </div>}
 
                 <div className="flex flex-col pt-5">
                     <h2 className="text-3xl font-bold">
@@ -51,10 +48,10 @@ export const BookCallPanel = ({ dictionary }: { dictionary: any }) => {
     );
 }
 
-export const BookCallButton = ({ dictionary, className }: { dictionary: any, className: string }) => {
+export const BookCallButton = ({ dictionary, className, backgroundClass }: { dictionary: any, className: string, backgroundClass?: string }) => {
 
     return (
-        <PrimaryButton className={className}>
+        <PrimaryButton className={className} backgroundClass={backgroundClass}>
             {dictionary.services.page_title_cta_book_call}
         </PrimaryButton>
     )

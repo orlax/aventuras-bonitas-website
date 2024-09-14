@@ -2,7 +2,7 @@
 
 import { PrimaryButton } from "@/components/button/primary_button/primaryButton";
 import { interpolateText } from "@/lib/utils";
-import { useCallback, useState } from "react";
+import { useCallback } from "react";
 
 export const BookCallPanel = ({ dictionary, remainingDays }: { dictionary: any, remainingDays: number }) => {
     // TODO: integrate Calendly https://developer.calendly.com/getting-started
@@ -52,7 +52,9 @@ export const BookCallButton = ({ dictionary, className, backgroundClass }: { dic
 
     return (
         <PrimaryButton className={className} backgroundClass={backgroundClass}>
-            {dictionary.services.page_title_cta_book_call}
+            <a href="https://calendly.com/contacto-aventurasbonitas/30min" target="_blank" rel="noopener noreferrer">
+                {dictionary.services.page_title_cta_book_call}
+            </a>
         </PrimaryButton>
     )
 }

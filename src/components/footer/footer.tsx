@@ -27,9 +27,9 @@ export const Footer = ({
   };
   return (
     <footer
-      className="flex px-8 py-5 gap-6
+      className="relative flex px-8 py-5 gap-6
         md:flex-row xs:flex-col
-        md:justify-around xs:justify-between bg-ab-black items-center"
+        md:justify-around xs:justify-between bg-ab-black items-center z-0"
     >
       <div className="h-14 w-28 relative">
         <Image

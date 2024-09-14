@@ -87,7 +87,42 @@
         "title": "ウェブアプリケーション開発",
         "description": "ウェブアプリケーションの開発。"
       }
-    ]
+    ],
+
+    "offer_tag": {
+        "tittle": "期間限定オファー ",
+        "remaining_time_plural": "残り%time_left%日",
+        "remaining_time_singular": "残り%time_left%日"
+    },
+
+    "page_title": "次の質問に対する答えを見つけよう",
+    "page_title_2": "ソフトウェア製品をどう作るか。",
+    "page_subtitle": "11年間にわたり、世界クラスのソフトウェアを作成。",
+    "page_caption": "あなたのビジョン、私たちの専門知識。",
+    "page_title_cta_book_call": "無料のディスカバリーコールを予約する",
+    "page_game_service_title": "画期的なアイデアをお持ちですか？",
+    "page_game_service_title_2": "それを実現しましょう！",
+    "page_game_service_description": "こんにちは！私たちはNice Adventures、情熱的なゲーム開発スタジオです。時々、私たちのスキルを活かして、あなたのような方が素晴らしいソフトウェアを作るお手伝いをします。こちらが提案です：",
+    "page_why_us_title": "なぜ私たちを選ぶのか？",
+    "page_why_us_reasons": [
+        "私たちはゲーム開発者として❤️、あらゆるプロジェクトに創造性と情熱を注ぎます。",
+        "世界クラスのソフトウェアを作り続けて11年。",
+        "あなたのプロジェクトには本当に時間をかけます。複数のクライアントを同時に対応していません。",
+        "私たちはただのエージェンシーではなく、真のパートナー🔥でありたいと考えています。"
+    ],
+    "page_stack_title": "私たちのサービス",
+    "page_stack_list": [
+        "モバイルアプリ (React Native)",
+        "ウェブプラットフォーム (Python/Django, Node.js, Java)",
+        "ウェブアプリ (React, Angular)",
+        "ビデオゲーム (2D, 3D, AR/VR, Unity, マルチプレイヤー)",
+        "AI統合 (ChatGPT、その他のLLM、自律エージェント)"
+    ],
+    "page_trusted_by_title": "私たちの実績",
+    "page_trusted_by_description": "私たちは、数十万人のユーザーが使用するモバイルアプリケーションやウェブプラットフォームを開発してきました。そして最近では、既存のビジネスソリューションにAIやLLMを統合する豊富な経験を得ています。これまで支援してきた企業の一部をご紹介します。",
+    "page_comments_title": "ここがポイント",
+    "page_comments_description": "私たちは常に新しいクライアントを受け入れているわけではありませんが、このページを見ているということは、私たちの限定リストに空きがあるということです。今が私たちの専門知識をあなたのプロジェクトに活かすチャンスです！",
+    "page_comments_book_call_cta": "無料のディスカバリーコールを予約する"
   },
   "footer": {
     "blog": "ブログ",

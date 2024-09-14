@@ -8,8 +8,6 @@ import { getDictionary, Locale } from "@/dictionaries";
 import { promises as fs } from "fs";
 import { ServicesPanel } from "@/components/panel/services_panel/servicesPanel";
 import { getFeaturedGame } from "@/api/firebase/games";
-import { fireAppStorage, fireStorageRef } from "@/services/firebase";
-import { getDownloadURL } from "firebase/storage";
 import Image from "next/image";
 import { CarousellGalery } from "@/components/gallery/carouselGallery";
 
@@ -26,12 +24,6 @@ export default async function Home({ params: { lang } }: HomeProps) {
   const file = await fs.readFile(process.cwd() + "/src/api/data.json", "utf8");
   const data = JSON.parse(file);
 
-  const firePromoVideo = fireStorageRef(
-    fireAppStorage,
-    "/assets/featured_game/castle.mp4"
-  );
-  const promoVideo = await getDownloadURL(firePromoVideo);
-
   const slides = data?.gallery.map((slide: SpringCarouselImage) => ({
     url: slide?.url,
     name: slide.name,
@@ -46,7 +38,7 @@ export default async function Home({ params: { lang } }: HomeProps) {
         loop
         id="gameplay_video"
       >
-        <source src={promoVideo} type="video/mp4" />
+        <source src="/featured_game/castle.mp4" type="video/mp4" />
       </video>
       <div className="absolute h-screen w-screen backdrop-blur-sm bg-gradient-to-b from-white/10 top-0" />
 
@@ -58,7 +50,7 @@ export default async function Home({ params: { lang } }: HomeProps) {
           contactDict={dictionary.subscribe}
           title={featuredGame?.promotional[lang]?.title}
           description={featuredGame?.promotional[lang]?.description}
-          promoVideoURL={promoVideo}
+          promoVideoURL={"/featured_game/castle.mp4"}
           buttonLabel={dictionary.promo_panel.button_label}
         />
       </ContentWrapper>

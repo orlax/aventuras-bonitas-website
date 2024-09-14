@@ -43,6 +43,7 @@ const config: Config = {
         'ab-gray': '#B8B8B8',
         'ab-purple': '#7013F2',
         'ab-purple-a-90': '#7013F290',
+        'ab-yellow': '#FFD700',
         'ab-orange': '#FFBF46',
         'ab-orange-a-80': '#FFBF4680',
         'ab-light-blue': '#D1F2FF',

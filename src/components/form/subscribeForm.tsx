@@ -107,7 +107,7 @@ export const SubscribeForm = ({
       >
         <label className="font-semibold">{dictionary?.form_name}</label>
         <input
-          className="w-full py-3 px-6 border border-ab-gray rounded-lg"
+          className="w-full py-3 px-6 border border-ab-gray rounded-lg text-black"
           type="text"
           name="mce-FNAME"
           placeholder={dictionary?.form_placeholder_name}
@@ -120,7 +120,7 @@ export const SubscribeForm = ({
         )}
         <label className="font-semibold">{dictionary?.form_email}</label>
         <input
-          className="w-full py-3 px-6 border border-ab-gray rounded-lg"
+          className="w-full py-3 px-6 border border-ab-gray rounded-lg  text-black"
           type="email"
           name="mce-EMAIL"
           placeholder={dictionary?.form_placeholder_email}

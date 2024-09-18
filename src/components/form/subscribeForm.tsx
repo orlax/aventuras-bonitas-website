@@ -87,14 +87,14 @@ export const SubscribeForm = ({
         isValid = value?.trim().length > 0 && /^[a-zA-Z ]+$/.test(value);
         break;
       case "email":
-        isValid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value);
+        isValid = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(value);
         break;
-
       default:
         break;
     }
     return isValid;
   };
+  
 
   return (
     <>

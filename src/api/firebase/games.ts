@@ -1,5 +1,4 @@
 import { Locale } from "@/dictionaries";
-import { fireChild, fireDBRef, fireGet } from "@/services/firebase";
 
 type ABGame = {
   description: { [key: string]: string };

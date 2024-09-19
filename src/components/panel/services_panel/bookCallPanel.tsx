@@ -5,7 +5,6 @@ import { interpolateText } from "@/lib/utils";
 import { useCallback } from "react";
 
 export const BookCallPanel = ({ dictionary, remainingDays }: { dictionary: any, remainingDays: number }) => {
-    // TODO: integrate Calendly https://developer.calendly.com/getting-started
 
     const getRemainingDaysText = useCallback(() => {
         const text = remainingDays > 1 ?
@@ -27,10 +26,10 @@ export const BookCallPanel = ({ dictionary, remainingDays }: { dictionary: any, 
                 {remainingDays > 0 &&
                 <div className="animate-bounce flex items-center font-bold uppercase py-0.5 px-5 gap-1 bg-ab-yellow rounded-md -mt-10">
                     <h3 className="text-black">{dictionary.services.offer_tag.tittle}</h3>
-                    <h3>{getRemainingDaysText()}</h3>
+                    <h3 className="text-white">{getRemainingDaysText()}</h3>
                 </div>}
 
-                <div className="flex flex-col pt-5">
+                <div className="flex flex-col pt-5 text-white">
                     <h2 className="text-3xl font-bold">
                         {dictionary.services.page_title}
                     </h2>

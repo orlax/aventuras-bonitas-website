@@ -1,5 +1,6 @@
 import { ContentWrapper } from "@/components/container/page_wrapper/contentWrapper";
 import { BookCallButton, BookCallPanel } from "@/components/panel/services_panel/bookCallPanel";
+import { HighLightedListItem } from "@/components/text/highlightedListItem";
 import { getDictionary } from "@/dictionaries";
 import { getDifferenceInDays } from "@/lib/utils";
 import { fireChild, fireDBRef, fireGet } from "@/services/firebase";
@@ -7,8 +8,8 @@ import { PageProps } from "@/types/pageProps";
 import { unstable_cache } from "next/cache";
 
 // Next.js will invalidate the cache when a
-// request comes in, at most once every 60 seconds.
-export const revalidate = 60;
+// request comes in, at most once per day.
+export const revalidate = 60 * 60 * 24;
 
 export default async function Services({ params: { lang } }: PageProps) {
     
@@ -37,6 +38,19 @@ export default async function Services({ params: { lang } }: PageProps) {
     const remainingDays = getDifferenceInDays(new Date(), new Date(offer));
     // ============================================================================
     
+    const companies = [
+        {
+            name: "Trixel",
+            url: "https://trixel.co/",
+            logo: "/trusted/trixel.png"
+        },
+        {
+            name: "BrainBox",
+            url: "https://brainbox.technology/",
+            logo: "/trusted/brainbox.png"
+        },
+    ];
+
     return (
         <main className="block pt-[100px]">
             <video
@@ -55,7 +69,7 @@ export default async function Services({ params: { lang } }: PageProps) {
                 <BookCallPanel dictionary={dictionary} remainingDays={remainingDays} />
             </ContentWrapper>
 
-            <ContentWrapper className="relative bg-white gap-6 px-12">
+            <ContentWrapper className="relative bg-gradient-to-b from-ab-light-blue from-20% via-white via-45% to-white gap-6 px-12 flex flex-col gap-5">
                 {/* Game development */}
                 <section className="flex flex-col items-center justify-center text-center text-black gap-2">
                     <div className="flex flex-col pt-5 font-semibold">
@@ -67,7 +81,7 @@ export default async function Services({ params: { lang } }: PageProps) {
                         </h2>
                     </div>
 
-                    <p className="w-1/2">
+                    <p className="w-2/3">
                         {dictionary.services.page_game_service_description}
                     </p>
                 </section>
@@ -97,11 +111,11 @@ export default async function Services({ params: { lang } }: PageProps) {
                         </h3>
                     </div>
 
-                    <ul className="flex flex-col gap-2">
+                    <ul className="relative flex flex-col gap-2">
                     {dictionary.services.page_stack_list.map((text, index) => (
-                            <li key={`why_us_${index}`}>
-                                <p className="before:content-['-_']">{text}</p>
-                            </li>
+                        <li key={`why_us_${index}`}>
+                            <HighLightedListItem text={text} />
+                        </li>
                     ))} 
                     </ul>
                 </section>
@@ -116,7 +130,18 @@ export default async function Services({ params: { lang } }: PageProps) {
 
                     <p>{dictionary.services.page_trusted_by_description}</p>
 
-                    {/* TODO: add company images... */}
+                    <ul className="flex gap-6 items-center justify-center mt-3">
+                        {companies.map(({ url, logo, name }, index) => (
+                            <li key={`company_${index}`}>
+                                <a href={url} target="_blank" rel="noopener noreferrer">
+                                    <img
+                                        className="h-[30px] w-auto" 
+                                        src={logo} alt={name} 
+                                    />
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
                 </section>
 
                 {/* Comments */}

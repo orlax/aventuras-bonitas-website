@@ -6,7 +6,7 @@ export const HighLightedListItem = ({
     text
 }: { text: string }) => {
 
-    const offsetList = ["-ml-2.5", "-ml-3", "-ml-3.5"];
+    const offsetList = ["-ml-1", "-ml-1.5", "-ml-2"];
     const rotationList = ["origin-bottom -rotate-[0.25deg]", "", "origin-bottom rotate-[0.25deg]"];
 
     const [offset, setOffset] = useState("");
@@ -18,9 +18,11 @@ export const HighLightedListItem = ({
     }, []);
 
     return (
-        <>
+        <span className="relative z-0">
             <div className={`w-full h-6 bg-ab-lilac absolute ${offset} ${rotation}`}></div>
-            <p className="relative z-0">{text}</p>
-        </>
+            <p className="relative z-0">
+                {text}
+            </p>
+        </span>
     )    
 }

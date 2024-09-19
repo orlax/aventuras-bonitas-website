@@ -2,7 +2,6 @@ import { ContentWrapper } from "@/components/container/page_wrapper/contentWrapp
 import { BookCallButton, BookCallPanel } from "@/components/panel/services_panel/bookCallPanel";
 import { HighLightedListItem } from "@/components/text/highlightedListItem";
 import { getDictionary } from "@/dictionaries";
-import { getDifferenceInDays } from "@/lib/utils";
 import { fireChild, fireDBRef, fireGet } from "@/services/firebase";
 import { PageProps } from "@/types/pageProps";
 import { unstable_cache } from "next/cache";
@@ -35,7 +34,6 @@ export default async function Services({ params: { lang } }: PageProps) {
         }
     );
     const offer = await getProjectOfferEndDateCachingData();
-    const remainingDays = getDifferenceInDays(new Date(), new Date(offer));
     // ============================================================================
     
     const companies = [
@@ -66,7 +64,7 @@ export default async function Services({ params: { lang } }: PageProps) {
 
             {/* Book a Call section */}
             <ContentWrapper>
-                <BookCallPanel dictionary={dictionary} remainingDays={remainingDays} />
+                <BookCallPanel dictionary={dictionary} startDate={new Date()} endDate={offer} />
             </ContentWrapper>
 
             <ContentWrapper className="relative bg-gradient-to-b from-ab-light-blue from-20% via-white via-45% to-white gap-6 px-12 flex flex-col gap-5">
@@ -104,7 +102,7 @@ export default async function Services({ params: { lang } }: PageProps) {
                 </section>
 
                 {/* What we do */}
-                <section className="flex flex-col text-black gap-2 w-full">
+                <section className="flex flex-col text-black gap-2 items-baseline">
                     <div className="flex flex-col pt-5 font-semibold text-ab-lilac">
                         <h3 className="text-2xl">
                             {dictionary.services.page_stack_title}
@@ -113,7 +111,7 @@ export default async function Services({ params: { lang } }: PageProps) {
 
                     <ul className="relative flex flex-col gap-2">
                     {dictionary.services.page_stack_list.map((text, index) => (
-                        <li key={`why_us_${index}`}>
+                        <li key={`why_us_${index}`} className="flex">
                             <HighLightedListItem text={text} />
                         </li>
                     ))} 

@@ -64,7 +64,7 @@ export default async function Services({ params: { lang } }: PageProps) {
 
             {/* Book a Call section */}
             <ContentWrapper>
-                <BookCallPanel dictionary={dictionary} startDate={new Date()} endDate={offer} />
+                <BookCallPanel dictionary={dictionary} startDate={new Date()} endDate={new Date(offer)} />
             </ContentWrapper>
 
             <ContentWrapper className="relative bg-gradient-to-b from-ab-light-blue from-20% via-white via-45% to-white gap-6 px-12 flex flex-col gap-5">

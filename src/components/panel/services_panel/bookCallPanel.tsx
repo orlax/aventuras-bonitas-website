@@ -68,8 +68,8 @@ export const BookCallPanel = ({ dictionary, startDate, endDate }: { dictionary: 
                     </h2>
                 </div>
 
-                <h4 className="capitalize">{dictionary.services.page_subtitle}</h4>
-                <h4 className="capitalize font-bold">{dictionary.services.page_caption}</h4>
+                <h4 className="capitalize text-white">{dictionary.services.page_subtitle}</h4>
+                <h4 className="capitalize font-bold text-white">{dictionary.services.page_caption}</h4>
 
                 <BookCallButton dictionary={dictionary} className="mt-3 flex px-8 py-1" />
             </section>

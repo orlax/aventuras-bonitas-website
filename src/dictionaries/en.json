@@ -127,7 +127,46 @@
     "page_trusted_by_description": "We've developed mobile applications and web platforms used by hundreds of thousands of users, and recently, we've gained extensive experience in integrating AI and LLMs into existing business solutions. Here are a few companies we've had help along the way.",
     "page_comments_title": "Here's the Twist",
     "page_comments_description": "We don't always take on new clients, but if you're seeing this page, it means we have an opening on our exclusive list. Now's your chance to let us bring our expertise to your project!",
-    "page_comments_book_call_cta": "Book a Free Discovery Call"
+    "page_comments_book_call_cta": "Book a Free Discovery Call",
+    "products": [
+      {
+        "title": "Adventure in Henders Castle",
+        "dev_to_company": "Nice Adventures",
+        "small_img": "/featured_game/home_promo.en.png",
+        "description": "We're actively developing Adventure in Henders Castle, a fully immersive 3D action-adventure game hat boasts intricate systems—from detailed inventory and skill management to dynamic world streaming and robust localization support."
+      },
+      {
+        "title": "IA Webpage Generator",
+        "dev_to_company": "Brainbox Hosting",
+        "small_img": "/services/products/llm.png",
+        "description": "Our AI-enabled content generation platform ingests information from various sources and automatically posts content to WordPress/Wix/Shopify websites. This simple yet effective tool amplifies the output of a single person managing multiple sites. The project leveraged OpenAI API integrations, sophisticated information embedding, and a streamlined workflow that takes content from prompt to publication. we also implemented a “private GPT” that works by allowing users to use LLMs but keep conversations private on their own servers."
+      },
+      {
+        "title": "FiatConnect",
+        "dev_to_company": "Cobru - Trixel",
+        "small_img": "/services/products/fiat-connect.png",
+        "description": "A service that connects your bank account to your crypto wallet using FiatConnet Service."
+      },
+      {
+        "title": "Chat Tool",
+        "dev_to_company": "Brainbox Hosting",
+        "small_img": "/services/products/chat-tool.png",
+        "description": "A chat tool that uses ChatGPT to provide customer service, can use for support."
+      },
+
+      {
+        "title": "Fulepu - The Game",
+        "dev_to_company": "Fulepu",
+        "small_img": "/services/products/fulepu/2.png",
+        "description": "We developed an online multiplayer trivia game tailored for educational purposes. Featuring an animated host who delivers questions and celebrates player achievements, the platform also supports multimedia responses including photos, videos, and audio recordings."
+      },
+      {
+        "title": "Excel game",
+        "dev_to_company": "Nice Adventures",
+        "small_img": "/services/products/JS-game.png",
+        "description": "A small game that we developed to test our skills. A commissioned prototype for a game that teaches the most common excel shortcuts. Available to play online. Made using HTML and javascript."
+      }
+    ]
   },
 
   "footer": {
@@ -135,7 +174,7 @@
     "jobs": "Work with us",
     "subscribe": "Subscribe",
     "company": "© Nice Adventures"
-  }, 
+  },
 
-  "cta_download":"Download the Demo"
+  "cta_download": "Download the Demo"
 }

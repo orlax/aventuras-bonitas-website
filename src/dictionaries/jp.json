@@ -122,7 +122,46 @@
     "page_trusted_by_description": "私たちは、数十万人のユーザーが使用するモバイルアプリケーションやウェブプラットフォームを開発してきました。そして最近では、既存のビジネスソリューションにAIやLLMを統合する豊富な経験を得ています。これまで支援してきた企業の一部をご紹介します。",
     "page_comments_title": "ここがポイント",
     "page_comments_description": "私たちは常に新しいクライアントを受け入れているわけではありませんが、このページを見ているということは、私たちの限定リストに空きがあるということです。今が私たちの専門知識をあなたのプロジェクトに活かすチャンスです！",
-    "page_comments_book_call_cta": "無料のディスカバリーコールを予約する"
+    "page_comments_book_call_cta": "無料のディスカバリーコールを予約する",
+    "products": [
+      {
+        "title": "ヘンダー城の冒険",
+        "dev_to_company": "美しい冒険",
+        "small_img": "/featured_game/home_promo.en.png",
+        "description": "私たちは、Hender Castle Adventureを積極的に開発しており、このゲームは、詳細なインベントリとスキル管理からダイナミックなワールドストリーミングとローカライゼーシ ョンの強力なサポートまで、完全に没入型の3Dアクションアドベンチャーゲームです。"
+      },
+      {
+        "title": "AIによるウェブページジェネレーター",
+        "dev_to_company": "ブレインボックスホスティング",
+        "small_img": "/services/products/llm.png",
+        "description": "AIによるウェブページジェネレーターは、さまざまな情報源から情報を取り込み、WordPress/Wix/Shopifyのウェブサイトに自動的にコンテンツを投稿するAI機能を備えたプラットフォームです。このシンプルで効果的なツールは、複数のサイトを管理する個人の生産性を向上させます。このプロジェクトは、OpenAIのAPI統合、高度な情報埋め込み、コンテンツをリクエストから公開まで運ぶシンプルなワークフローを活用しています。また、ユーザーがLLMを使用して会話を行うことができる「プライベートGPT」も実装しており、会話をユーザーのサーバーでプライベートに保つことができます。"
+      },
+      {
+        "title": "FiatConnet。",
+        "dev_to_company": "Cobru - Trixel",
+        "small_img": "/services/products/fiat-connect.png",
+        "description": "銀行口座と仮想通貨ウォレットをFiatConnetサービスを使用して接続するサービス。"
+      },
+      {
+        "title": "チャットツール",
+        "dev_to_company": "ブレインボックスホスティング",
+        "small_img": "/services/products/chat-tool.png",
+        "description": "ChatGPTを使用したチャットツールは、カスタマーサービスのサポートに使用できます。"
+      },
+
+      {
+        "title": "Fulepu - The Game",
+        "dev_to_company": "Fulepu",
+        "small_img": "/services/products/fulepu/2.png",
+        "description": "教育用に開発された多人数参加型のオンライントリビアゲームを開発しました。アニメーションの司会者が問題を出題し、プレイヤーの功績を称えるのが特徴で、このプラットフォームは写真、ビデオ、音声録音などのマルチメディア回答にも対応しています。"
+      },
+      {
+        "title": "エクセルゲーム",
+        "dev_to_company": "美しい冒険",
+        "small_img": "/services/products/JS-game.png",
+        "description": "腕試しに開発した小さなゲーム。エクセルのよく使うショートカットを教えるゲームのプロトタイプを依頼された。オンラインでプレイ可能。HTMLとjavascriptで作られています。"
+      }
+    ]
   },
   "footer": {
     "blog": "ブログ",

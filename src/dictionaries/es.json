@@ -95,9 +95,9 @@
     ],
 
     "offer_tag": {
-        "tittle": "Oferta por tiempo limitado ",
-        "remaining_time_plural": "Quedan %time_left% días",
-        "remaining_time_singular": "Queda %time_left% día"
+      "tittle": "Oferta por tiempo limitado ",
+      "remaining_time_plural": "Quedan %time_left% días",
+      "remaining_time_singular": "Queda %time_left% día"
     },
 
     "page_title": "Obtén respuestas sobre",
@@ -110,24 +110,63 @@
     "page_game_service_description": "¡Hola! Somos Nice Adventures, un apasionado estudio de desarrollo de juegos con un toque especial. A veces, prestamos nuestras habilidades para ayudar a personas como tú a construir software increíble. Aquí está la propuesta:",
     "page_why_us_title": "¿Por qué elegirnos?",
     "page_why_us_reasons": [
-        "Somos desarrolladores de juegos de corazón ❤️, aportando creatividad y pasión a cada proyecto.",
-        "11 años de experiencia creando software de clase mundial.",
-        "Tu proyecto recibe atención real; no estamos manejando docenas de clientes a la vez.",
-        "Queremos ser verdaderos socios 🔥, no solo otra agencia más."
+      "Somos desarrolladores de juegos de corazón ❤️, aportando creatividad y pasión a cada proyecto.",
+      "11 años de experiencia creando software de clase mundial.",
+      "Tu proyecto recibe atención real; no estamos manejando docenas de clientes a la vez.",
+      "Queremos ser verdaderos socios 🔥, no solo otra agencia más."
     ],
     "page_stack_title": "Lo que hacemos",
     "page_stack_list": [
-        "Aplicaciones móviles (React Native)",
-        "Plataformas web (Python/Django, Node.js, Java)",
-        "Aplicaciones web (React, Angular)",
-        "Videojuegos (2D, 3D, AR/VR, Unity, Multijugador)",
-        "Integración de IA (ChatGPT, otros LLMs, agentes autónomos)"
+      "Aplicaciones móviles (React Native)",
+      "Plataformas web (Python/Django, Node.js, Java)",
+      "Aplicaciones web (React, Angular)",
+      "Videojuegos (2D, 3D, AR/VR, Unity, Multijugador)",
+      "Integración de IA (ChatGPT, otros LLMs, agentes autónomos)"
     ],
     "page_trusted_by_title": "Nuestro historial",
     "page_trusted_by_description": "Hemos desarrollado aplicaciones móviles y plataformas web utilizadas por cientos de miles de usuarios, y recientemente hemos adquirido una amplia experiencia en la integración de IA y LLMs en soluciones empresariales existentes. Aquí algunas de las compañías a las que hemos ayudado en el camino.",
     "page_comments_title": "Y...",
     "page_comments_description": "No siempre aceptamos nuevos clientes, pero si estás viendo esta página, significa que tenemos un espacio en nuestra lista exclusiva. ¡Ahora es tu oportunidad de permitirnos aportar nuestra experiencia a tu proyecto!",
-    "page_comments_book_call_cta": "Reserva una llamada gratis"
+    "page_comments_book_call_cta": "Reserva una llamada gratis",
+    "products": [
+      {
+        "title": "Aventura en el Castillo de Hender",
+        "dev_to_company": "Aventuras Bonitas",
+        "small_img": "/featured_game/home_promo.en.png",
+        "description": "Estamos desarrollando activamente Aventura en el Castillo de Hender, un juego de acción y aventuras 3D completamente inmersivo que cuenta con sistemas intrincados, desde un detallado inventario y gestión de habilidades hasta un robusto soporte de transmisión de mundos dinámicos y localización."
+      },
+      {
+        "title": "Generador de Páginas Web con IA",
+        "dev_to_company": "Brainbox Hosting",
+        "small_img": "/services/products/llm.png",
+        "description": "Nuestra plataforma de generación de contenido habilitada para IA ingiere información de diversas fuentes y publica automáticamente contenido en sitios web de WordPress/Wix/Shopify. Esta herramienta simple pero efectiva amplifica la producción de una sola persona que administra varios sitios. El proyecto aprovecha las integraciones de API de OpenAI, los Embeddings de información sofisticada y un flujo de trabajo simplificado que lleva el contenido desde la solicitud hasta la publicación. También implementamos un “GPT privado” que permite a los usuarios utilizar LLMs pero mantener las conversaciones privadas en sus propios servidores."
+      },
+      {
+        "title": "FiatConnect",
+        "dev_to_company": "Cobru - Trixel",
+        "small_img": "/services/products/fiat-connect.png",
+        "description": "Un servicio que conecta tu cuenta bancaria con tu billetera de criptomonedas utilizando el servicio FiatConnet."
+      },
+      {
+        "title": "Herramienta de Chat",
+        "dev_to_company": "Brainbox Hosting",
+        "small_img": "/services/products/chat-tool.png",
+        "description": "Una herramienta de chat que utiliza ChatGPT para brindar servicio al cliente, se puede usar para soporte."
+      },
+
+      {
+        "title": "Fulepu - El juego",
+        "dev_to_company": "Fulepu",
+        "small_img": "/services/products/fulepu/2.png",
+        "description": "Desarrollamos un juego de trivia multijugador en línea diseñado para fines educativos. Con un presentador animado que entrega preguntas y celebra los logros de los jugadores, la plataforma también admite respuestas multimedia, incluidas fotos, videos y grabaciones de audio."
+      },
+      {
+        "title": "Juego de Excel",
+        "dev_to_company": "Nice Adventures",
+        "small_img": "/services/products/JS-game.png",
+        "description": "Un pequeño juego que desarrollamos para probar nuestras habilidades. Un prototipo encargado para un juego que enseña los atajos de Excel más comunes. Disponible para jugar en línea. Hecho con HTML y javascript."
+      }
+    ]
   },
 
   "footer": {
@@ -135,7 +174,7 @@
     "jobs": "Trabaja con nosotros",
     "subscribe": "Suscribirse",
     "company": "© Aventuras Bonitas"
-  }, 
+  },
 
-  "cta_download":"Descargar el Demo"
+  "cta_download": "Descargar el Demo"
 }

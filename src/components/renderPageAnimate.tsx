@@ -1,25 +1,15 @@
 "use client";
 
-import React, { useContext, useRef } from "react";
+import React from "react";
 import { usePathname } from "next/navigation";
-import { AnimatePresence } from "framer-motion";
-import { LayoutRouterContext } from "next/dist/shared/lib/app-router-context.shared-runtime";
-import { motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";import { motion } from "framer-motion";
 
-function FrozenRouter(props: { children: React.ReactNode }) {
-  const context = useContext(LayoutRouterContext ?? {});
-  const frozen = useRef(context).current;
+const variants = {
+  hidden: { opacity: 0, y: 100 },
+  enter: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: 100, transition: { duration: 0.2 } },
+};
 
-  if (!frozen) {
-    return <>{props.children}</>;
-  }
-
-  return (
-    <LayoutRouterContext.Provider value={frozen}>
-      {props.children}
-    </LayoutRouterContext.Provider>
-  );
-}
 
 export const RenderAnimatePage = ({
   children,
@@ -27,19 +17,23 @@ export const RenderAnimatePage = ({
   children: React.ReactNode;
 }) => {
   const path = usePathname();
-  const pageKey = path.split("/");
-  const keyPage = pageKey[2] ?? "main";
+  const keySplit = path.split("/");
 
   return (
-    <AnimatePresence mode="popLayout" initial>
+    <AnimatePresence mode="popLayout">
       <motion.div
-        key={keyPage}
-        className=""
-        initial="hidden"
-        animate="visible"
-        exit={{ opacity: 0, transition: { duration: 0.9 } }}
+        key={keySplit[2]}
+        initial={keySplit.length > 3 ? false : "hidden"}
+        animate={keySplit.length > 3 ? false : "enter"}
+        exit={keySplit.length > 3 ? undefined : "exit"}
+        variants={keySplit.length > 3 ? undefined : variants}
+        transition={
+          keySplit.length > 3
+            ? undefined
+            : { ease: "easeInOut", duration: 0.75 }
+        }
       >
-        <FrozenRouter>{children}</FrozenRouter>
+        {children}
       </motion.div>
     </AnimatePresence>
   );
